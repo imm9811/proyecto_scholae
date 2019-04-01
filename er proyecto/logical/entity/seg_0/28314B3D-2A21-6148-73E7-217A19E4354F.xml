@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="28314B3D-2A21-6148-73E7-217A19E4354F" name="pantallaPrincipal">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 13:26:16 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<engineerTo>
+<item key="C6845F8A-55BE-1D0E-6F8C-4570B5705AC3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="04AC36DA-97D0-6A59-0C39-020509B1B310">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 13:26:27 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<engineerTo>
+<item key="C6845F8A-55BE-1D0E-6F8C-4570B5705AC3" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>AD77DF9E-CA3D-743B-07E7-E556E774D682</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="titulo" id="7495827D-D0F9-8833-0C36-26B113A05AD0">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 13:26:44 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<engineerTo>
+<item key="C6845F8A-55BE-1D0E-6F8C-4570B5705AC3" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>30D88DDD-F711-C0B0-1C2C-021D1EA4F9CA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="texto" id="816452E6-3D35-95EC-07A3-84DBDD2C88D8">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 13:26:56 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<engineerTo>
+<item key="C6845F8A-55BE-1D0E-6F8C-4570B5705AC3" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1336A884-F0B8-A1AD-FE3D-DD9D9D430EF0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fotos" id="E0DE1562-7693-2001-B31A-F2C485090EDA">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 13:27:57 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<engineerTo>
+<item key="C6845F8A-55BE-1D0E-6F8C-4570B5705AC3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F6B3F0CA-7F17-BD6D-1A41-7B11FCF92C92</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="enlaces" id="0DF37C74-9D67-6927-D4BB-B4B3B616E2B7">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 13:28:09 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<engineerTo>
+<item key="C6845F8A-55BE-1D0E-6F8C-4570B5705AC3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_admin" id="98E7A30D-6C67-723D-AEE8-8A98BAA97E9C">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 14:01:54 UTC</createdTime>
+<generatorID>B8C1458E-6367-2BD0-8954-0F132B6F6F95</generatorID>
+<ownerDesignName>er proyecto</ownerDesignName>
+<engineerTo>
+<item key="C6845F8A-55BE-1D0E-6F8C-4570B5705AC3" value="true"/>
+</engineerTo>
+<referedAttribute>44DA6139-E0D9-DAE2-52AD-FF6077AA8D01</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>AD77DF9E-CA3D-743B-07E7-E556E774D682</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AED42844-6EF2-A0B7-BC64-19AC26F1F8C7" name="pantallaPrincipal PK">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 13:26:41 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<engineerTo>
+<item key="C6845F8A-55BE-1D0E-6F8C-4570B5705AC3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>04AC36DA-97D0-6A59-0C39-020509B1B310</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
