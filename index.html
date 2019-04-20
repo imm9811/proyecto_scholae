@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Pagina inicial</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--ALL with the latest version possible-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -372,22 +373,23 @@ p {
 
 footer{
 	background-color: black;
-	margin-top:10%; 
+	margin-top:10%;
+	padding: 5%; 
 }
 .cuerpo{
 	position: relative;
-	padding-left: 5%; 
-	background-color: ;
+	padding-left: 5%;
 }
 
 
 .texto_principal{
 	position: relative;
-	background-color: ;
+	margin: 10px 
 }
 .slide{
 	width: 80%;
 }
+
 .carousel-item .carousel-inner .view #video-carousel-example2{
 	width: 70%;
 	height: 10%;
@@ -401,7 +403,7 @@ aside{
 	border-left: groove black;	
 }
 
-@media (min-width: 900px) {
+@media only screen and (min-width: 900px)  {
     .mobile-bar {
         display: none;
     }
@@ -428,13 +430,67 @@ aside{
         padding: 15px 35px;
         /*header height and text spacing*/
     }
+    .slide{
+		width: 96% !important;
+	}
+}
+/*PARA ORDENADOR*/
+@media only screen and (max-width: 900px)  {
+	.testFade{
+		margin-bottom:30%; 
+	}
+	.slide{
+		width: 99%;
+	}
+}
+/*PARA MOVIL*/
+@media only screen and (max-width: 800px)  {
+	.testFade{
+		margin-bottom:60%; 
+	}
+	.slide{
+		width: 99%;
+		}
+}
+
+html::-webkit-scrollbar { 
+  /* solo oculta su visualizacion */
+  display: none;
 }
 
 
-
 </style>
-<body>
-		<!--Main Navigation https://codepen.io/illdapt/pen/amdQmg	https://codepen.io/web-tiki/pen/HhCyd  https://codepen.io/conorjmcnamara/pen/dLNdRo?&page=1--> 
+
+<script>
+
+var a=true;
+
+ $(document).ready(function() {
+    $(".menu-icon").click(()=>{
+    	
+    	switch(a){
+    		case true:
+    			a=false;
+    			$(".test").addClass("testFade");
+    		break;
+
+    		case false:
+    			a=true;
+    			$(".testFade").removeClass("testFade");
+    		break;
+    	}
+    });
+    $("#container").click(()=>{
+    	$(".testFade").removeClass("testFade");
+    	if($(".menu-toggle").prop("checked")){
+    		$(".menu-icon").click();
+    	}
+    });
+
+ });
+</script>
+<body scroll="no">
+		<!--Main Navigation https://codepen.io/illdapt/pen/amdQmg	https://codepen.io/web-tiki/pen/HhCyd  https://codepen.io/conorjmcnamara/pen/dLNdRo?&page=1    https://mdbootstrap.com/snippets/jquery/temp/590618?action=prism_export--> 
 		<!--HEADER-->
 <div>
 	<div class="test">
@@ -449,26 +505,21 @@ aside{
             <nav>
                 <ul>
                     <li><a href="#">Plataformas</a></li>
+                    <li><a href="#">Login</a></li>
                     <li><a href="#">EXAMPLE</a></li>
                     <li><a href="#">EXAMPLE</a></li>
-                    <li>
-                        <a href="#">
-                            <p>Login</p>
-                        </a>
-                    </li>
-                    <li><a href="#" class="fancy-button pop-onhover bg-gradient3"><span>Sign Up</span></a></li>
-
+                   
                 </ul>
             </nav>
         </header>
 
         <a class="navbar-brand" href="http://disputebills.com" style="padding:0px;">
-            <img title="logo" alt="iesromerovargas" src="https://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png">
+            <img src="https://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png">
         </a>
 
     </div>	
 </div>
-<div class="container-fluid">
+<div id="container" class="container-fluid">
     <div class="row">
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
           <ul class="nav nav-pills flex-column">
@@ -500,23 +551,11 @@ aside{
               <a class="nav-link" href="#">Another nav item</a>
             </li>
           </ul>
-
-          <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Nav item again</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">One more nav</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Another nav item</a>
-            </li>
-          </ul>
         </nav>
-    	<div class="col-lg-10 cuerpo">
+    	<div class="col-lg-10 col-md-10 col-xs-12 cuerpo">
     		<div class="row">
     			<!--SLIDER-->
-				<div class="col-lg-12 slide">
+				<div class="slide">
 					<!--Carousel Wrapper-->
 					<div id="video-carousel-example2" class="carousel slide carousel-fade" data-ride="carousel">
 					  <!--Indicators-->
@@ -611,15 +650,15 @@ aside{
 				<!--fin slider-->
 				</div> 
 				<!--Carousel Wrapper-->
-    			<div class="col-lg-9 texto_principal" >
+    			<div class="col-lg-7 col-sm-9 col-xs-9 texto_principal" >
 		    		<!--TEXTO PARA LAS NOTICIAS -->
 		    		<div class="row">
 		    			aqui con los row se generaran las distintas noticias, esta parte es recurrente con php
 		    		</div>
     			</div>
 		    	<!--ASIDE-->
-		    	<div class="col-lg-3 aside" >
-		    		aqui con los row se generaran las distintas noticias, esta parte es recurrente con php
+		    	<div class="col-lg-3 col-sm-3 col-xs-3 aside">
+		    		aqui con los row se generaran las los aside asdasdasdasqui con los row se generaran las los aside asdasdasdas
 		    	</div>
     		</div>
 		</div>
