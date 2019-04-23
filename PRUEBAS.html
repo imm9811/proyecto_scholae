@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <!-- In the head section of your page --> 
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" /> 
+    <link href="assets/cool-share/plugin.css" media="all" rel="stylesheet" /> 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(function (){
+
+        var url = 'http://tutorialzine.com/2014/08/cool-share-jquery-plugin/';
+    
+        var options = {
+    
+            twitter: {
+                text: 'Check out this awesome jQuery Social Buttons Plugin! ',
+                via: 'Tutorialzine'
+            },
+            googlePlus : true,
+            whatsApp:true
+        };
+    
+        $('.socialShare').shareButtons(url, options);
+    alert("hola");
+    
+    /*
+    
+        // You can also share to pinterest and tumblr:
+    
+        var options = {
+    
+            // Pinterest requires a image to be "pinned"
+    
+            pinterest: {
+                media: 'http://example.com/image.jpg',
+                description: 'My lovely picture'
+            },
+    
+            // Tumblr takes a name and a description
+    
+            tumblr: {
+                name: 'jQuery Social Buttons Plugin!',
+                description: 'There is a new article on tutorialzine.com page! Check out!'
+            }
+        };
+    
+    */
+    
+    });
+</script>
+  
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+   
+    <span class="socialShare"></span>
+  <!-- Near the closing body tag --> <script src="assets/cool-share/plugin.js"></script>
+</body>
+</html>
