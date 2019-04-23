@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="da_curso" directorySegmentName="seg_0" id="B2119138-5AAD-DDAB-F948-BA2D15702FFC">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 14:00:17 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<engineerTo>
+<item key="C6845F8A-55BE-1D0E-6F8C-4570B5705AC3" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>8C8EC9D1-24DA-927A-95D2-4C0C91A6F417</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F1B61B3F-6304-E138-BB85-9531EB476281</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="maneja" directorySegmentName="seg_0" id="B8C1458E-6367-2BD0-8954-0F132B6F6F95">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 14:01:54 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<engineerTo>
+<item key="C6845F8A-55BE-1D0E-6F8C-4570B5705AC3" value="true"/>
+</engineerTo>
+<sourcePk>E70062DA-E0DD-ABA8-C70D-FA235298DC53</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3B7E8255-720D-5A8E-2C25-7630ABD780B0</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>28314B3D-2A21-6148-73E7-217A19E4354F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

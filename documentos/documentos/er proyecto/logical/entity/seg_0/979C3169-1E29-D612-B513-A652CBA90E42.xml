@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="979C3169-1E29-D612-B513-A652CBA90E42" name="asignaturas">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 13:54:41 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<engineerTo>
+<item key="C6845F8A-55BE-1D0E-6F8C-4570B5705AC3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_asignatura" id="02DE88D0-3B37-800C-8AF6-EAA53DEF7EA0">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 13:54:49 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<engineerTo>
+<item key="C6845F8A-55BE-1D0E-6F8C-4570B5705AC3" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>AD77DF9E-CA3D-743B-07E7-E556E774D682</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="B4F9B233-F885-6498-B4FA-6494CBDC6312">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 13:55:03 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<engineerTo>
+<item key="C6845F8A-55BE-1D0E-6F8C-4570B5705AC3" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>30D88DDD-F711-C0B0-1C2C-021D1EA4F9CA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="D4051267-7697-6675-3EA0-47FA94602177">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 13:55:17 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<engineerTo>
+<item key="C6845F8A-55BE-1D0E-6F8C-4570B5705AC3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1336A884-F0B8-A1AD-FE3D-DD9D9D430EF0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

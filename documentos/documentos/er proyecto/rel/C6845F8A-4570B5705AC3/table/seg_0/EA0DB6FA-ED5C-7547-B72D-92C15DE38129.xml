@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EA0DB6FA-ED5C-7547-B72D-92C15DE38129" name="profesor">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 12:45:21 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_profesor" id="8830D574-A0E2-AB78-748B-B3DC755C02F3">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 12:50:21 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>AD77DF9E-CA3D-743B-07E7-E556E774D682</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_persona" id="EF2E2C7D-3320-AB62-D1E5-7A1D7B53BA8D">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 12:50:36 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>AD77DF9E-CA3D-743B-07E7-E556E774D682</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="curso" id="7AA3A411-472B-2309-AD9E-944FE80AD0D7">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 12:50:52 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_nac" id="F3F8A6B0-BA56-5186-6223-D6B1E5C5A88A">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 12:51:11 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DAAC49D4-1792-1439-BC1E-1AA5C3336B2F" name="profesor_PK">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-28 12:50:21 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8830D574-A0E2-AB78-748B-B3DC755C02F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
