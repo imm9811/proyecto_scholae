@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="puede_ser" directorySegmentName="seg_0" id="881B37EC-6F4E-36BA-0E51-42D58CEB2ACD">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-03-29 06:27:57 UTC</createdTime>
+<ownerDesignName>er proyecto</ownerDesignName>
+<engineerTo>
+<item key="C6845F8A-55BE-1D0E-6F8C-4570B5705AC3" value="true"/>
+</engineerTo>
+<sourcePk>0535D282-BDD7-542D-03B8-12B3D8BE71D9</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>ED3368A2-0D08-AC52-8C44-E1AEAA3074F4</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>3B7E8255-720D-5A8E-2C25-7630ABD780B0</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

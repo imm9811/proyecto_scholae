@@ -11,7 +11,7 @@
     box-shadow: 0 0 6px #c9d1de;
     -webkit-box-shadow: 0 0 6px #c9d1de;
     -moz-box-shadow: 0 0 6px #c9d1de;
-    -o-box-shadow: 0 0 6px #c9d1de;
+    -o-box-shadow: 0 0 6px #c9d1de; 
 }
 
 .back_link {
@@ -74,7 +74,7 @@ img {
     margin: 0% auto;
     text-align: center;
     transform-style: perserve-3d;
-    perspective: 400px;
+    perspecive: 400px;
 }
 
 a,
@@ -317,8 +317,6 @@ p {
     }
 }
 
-
-
 .navbar-brand {
     padding: 0px;
 }
@@ -351,7 +349,6 @@ p {
     overflow-x: hidden;
     overflow-y: auto;
     border-right: 1px solid #eee;
-
 }
 
 footer{
@@ -361,21 +358,16 @@ footer{
 }
 .cuerpo{
 	position: relative;
-	padding-left: 5%;
+	padding-left: 3%;
 }
-
 
 .texto_principal{
 	position: relative;
 	margin: 10px 
 }
-.slide{
-	width: 80%;
-}
 
-.carousel-item .carousel-inner .view #video-carousel-example2{
-	width: 70%;
-	height: 10%;
+.carousel-caption{
+    margin-bottom:5%;
 }
 video{
 	width: 100%;
@@ -398,10 +390,7 @@ aside{
     }
 }
 
-#generarPlataformas{
-	display: inline-block;
-}
-
+//efectos para el ordenador pero se quitaran cuando cambie de dimensiones la pagina
 @media only screen and (min-width: 900px)  {
     .mobile-bar {
         display: none;
@@ -417,37 +406,39 @@ aside{
         visibility: visible;
         opacity: 1;
         text-align: right;
-    }
-    .header{ 
         li {
-        display: inline-block;
-        margin-right: -6px;
-        /* fix the inline-block gap */
-        border: none;
-        text-align: left;
+            display: inline-block;
+            margin-right: -6px;
+            /* fix the inline-block gap */
+            border: none;
+            text-align: left;
         }
         a {
-        padding: 15px 35px;
-        /*header height and text spacing*/
-    	}
+            padding: 15px 35px;
+            /*header height and text spacing*/
+        }
     }    
     .slide{
-		width: 96% !important;
+		width: 98% !important;
 	}
 	#plataformas>.row>div{
 		margin-top: 10%;	
-	}
+    }
+    //desde aqui se ajusta la altura del slider
+    .carousel-item{
+        height:430px;
+    }
+    source{
+        height: 430px;
+    }
 }
-
-
-
 /*PARA ORDENADOR*/
 @media only screen and (max-width: 900px)  {
 	.testFade{
 		margin-bottom:30%; 
 	}
 	.slide{
-		width: 99%;
+		width: 100%;
 	}
 }
 /*PARA MOVIL*/
@@ -455,9 +446,11 @@ aside{
 	.testFade{
 		margin-bottom:60%; 
 	}
-	.slide{
-		width: 99%;
-	}
+    .header{
+        li{
+            text-align: center;
+        }
+    }
     #plataformas{
         text-align: center; 
         img{

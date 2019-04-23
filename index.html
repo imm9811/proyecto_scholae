@@ -1,30 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138899277-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-138899277-1');
-</script>
-
 	<meta charset="UTF-8">
 	<title>Pagina inicial</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--ALL with the latest version possible-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="ASSETS/css/temaprincipal.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	
+</head>
+
+<link rel="stylesheet" type="text/css" href="ASSETS/css/temaprincipal.css">
 <script>
 
 var a=true;
-/*https://trends.google.com/trends/explore?geo=ES&q=ense%C3%B1anza
-https://www.xml-sitemaps.com/*/
+
  $(document).ready(function() {
     $(".menu-icon").click(()=>{
     	
@@ -49,9 +40,6 @@ https://www.xml-sitemaps.com/*/
 
  });
 </script>
-</head>
-
-
 <body scroll="no">
 		<!--Main Navigation https://codepen.io/illdapt/pen/amdQmg	https://codepen.io/web-tiki/pen/HhCyd  https://codepen.io/conorjmcnamara/pen/dLNdRo?&page=1    https://mdbootstrap.com/snippets/jquery/temp/590618?action=prism_export--> 
 		<!--HEADER-->
@@ -68,9 +56,6 @@ https://www.xml-sitemaps.com/*/
             <nav>
                 <ul>
                     <li><a href="plataformas.html">Plataformas</a></li>
-                    <li><a href="Login-register.html">Login</a></li>
-                    <li><a href="#">EXAMPLE</a></li>
-                    <li><a href="#">EXAMPLE</a></li>
                    
                 </ul>
             </nav>
@@ -213,14 +198,14 @@ https://www.xml-sitemaps.com/*/
 				<!--fin slider-->
 				</div> 
 				<!--Carousel Wrapper-->
-    			<div class="col-lg-7 col-sm-9 col-xs-9 texto_principal" >
+    			<div class="col-lg-8 col-sm-12 col-xs-12 texto_principal" >
 		    		<!--TEXTO PARA LAS NOTICIAS -->
 		    		<div class="row">
 		    			aqui con los row se generaran las distintas noticias, esta parte es recurrente con php
 		    		</div>
     			</div>
 		    	<!--ASIDE-->
-		    	<div class="col-lg-3 col-sm-3 col-xs-3 aside">
+		    	<div class="col-lg-3 col-sm-12 col-xs-12 aside">
 		    		aqui con los row se generaran las los aside asdasdasdasqui con los row se generaran las los aside asdasdasdas
 		    	</div>
     		</div>
@@ -231,71 +216,48 @@ https://www.xml-sitemaps.com/*/
 <!-- Footer -->
 <footer class="page-footer font-small pt-4">
 
-    <!-- Footer Links -->
-    <div class="container-fluid text-center text-md-left">
+	<!-- Footer Links -->
+	<div class="container-fluid text-center text-md-left">
 
-      <!-- Grid row -->
-      <div class="row">
+		<!-- Grid row -->
+		<div class="row">
 
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
+			<!-- Grid column -->
+			<div class="col-md-6 mt-md-0 mt-3">
 
-          <!-- Content -->
-          <h5 class="text-uppercase">Footer Content</h5>
-          <p>Here you can use rows and columns here to organize your footer content.</p>
+				<!-- Content -->
+				<h5 class="text-uppercase">Footer Content</h5>
+				<p>Here you can use rows and columns here to organize your footer content.</p>
 
-        </div>
-        <!-- Grid column -->
+			</div>
+			<!-- Grid column -->
 
-        <hr class="clearfix w-100 d-md-none pb-3">
+			<hr class="clearfix w-100 d-md-none pb-3">
 
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
+			
+				<!-- Grid column copiar la misma para poner otra columna-->
+				<div class="col-md-3 mb-md-0 mb-3"></div>
+					<div class="col-md-3 mb-md-0 mb-3">
+					<!-- Links 						https://www.w3schools.com/icons/fontawesome_icons_brand.asp						-->
+					<h5 class="text-uppercase">Links</h5>
 
-            <!-- Links -->
-            <h5 class="text-uppercase">Links</h5>
+					<ul class="list-unstyled">
+						<li>
+							<a href="https://www.facebook.com/FPRomeroVargas/" class="fa">&#xf230; Facebook</a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/explore/locations/204616402957491/iesfrancisco-romero-vargas?hl=es" class="fa">&#xf16d; Instagram</a>
+						</li>
+						<li>
+							<a href="#!">Link 3</a>
+						</li>
+						<li>
+							<a href="#!">Link 4</a>
+						</li>
+					</ul>
 
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!">Link 1</a>
-              </li>
-              <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-3 mb-md-0 mb-3">
-
-            <!-- Links -->
-            <h5 class="text-uppercase">Links</h5>
-
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!">Link 1</a>
-              </li>
-              <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-
-          </div>
-          <!-- Grid column -->
+				</div>
+				<!-- Grid column -->
 
       </div>
       <!-- Grid row -->
