@@ -398,7 +398,9 @@ aside{
     }
 }
 
-
+#generarPlataformas{
+	display: inline-block;
+}
 
 @media only screen and (min-width: 900px)  {
     .mobile-bar {
@@ -427,7 +429,7 @@ aside{
         a {
         padding: 15px 35px;
         /*header height and text spacing*/
-    }
+    	}
     }    
     .slide{
 		width: 96% !important;
@@ -436,6 +438,9 @@ aside{
 		margin-top: 10%;	
 	}
 }
+
+
+
 /*PARA ORDENADOR*/
 @media only screen and (max-width: 900px)  {
 	.testFade{
