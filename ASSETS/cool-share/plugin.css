@@ -127,6 +127,14 @@
 
 /* The social icons */
 
+.socialPlugin .socials .custom:after {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #25d366), color-stop(75%, #ffffff));
+	background-image: -webkit-linear-gradient(#25d366 25%, #ffffff 75%);
+	background-image: linear-gradient(#25d366 25%, #ffffff 75%);
+	content: "\f232";
+	color: #25d366;
+}
+
 .socialPlugin .socials .fa-twitter:after {
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #00acee), color-stop(75%, #ffffff));
 	background-image: -webkit-linear-gradient(#00acee 25%, #ffffff 75%);
