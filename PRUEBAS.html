@@ -7,7 +7,7 @@
     <title>Document</title>
     
     <!-- In the head section of your page --> 
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" /> 
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" /> 
     <link href="assets/cool-share/plugin.css" media="all" rel="stylesheet" /> 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -22,15 +22,15 @@
                 text: 'Check out this awesome jQuery Social Buttons Plugin! ',
                 via: 'Tutorialzine'
             },
-            googlePlus : true,
+            facebook: true,
+            googlePlus : false,
             whatsApp:true
         };
     
         $('.socialShare').shareButtons(url, options);
-    alert("hola");
     
     /*
-    
+    https://colorlib.com/wp/jquery-plugins-social-media/
         // You can also share to pinterest and tumblr:
     
         var options = {
@@ -51,7 +51,7 @@
         };
     
     */
-    
+    $('img').svgmagic();//renderiza las imagenes en caso de que el navegador no soporte el svg
     });
 </script>
   
@@ -67,11 +67,13 @@
   <br>
   <br>
   <br>
+
+<a href="https://wa.me/whatsappphonenumber/?text=urlencodedtext">asdasd</a>
+
   <br>
   <br>
-  <br>
-   
+  <img src="imagenes/svgpasen.svg" alt="logo">
     <span class="socialShare"></span>
-  <!-- Near the closing body tag --> <script src="assets/cool-share/plugin.js"></script>
+  <!-- Near the closing body tag --> <script src="assets/cool-share/plugin - copia.js"></script>
 </body>
 </html>
