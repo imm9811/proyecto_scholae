@@ -1,0 +1,50 @@
+[
+    {
+        "name": "doctrine/doctrine1",
+        "version": "v1.2.5",
+        "version_normalized": "1.2.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/doctrine/doctrine1.git",
+            "reference": "88903e2d7d82852ec9b80ccbf02bd8e6fa2cbec6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/doctrine/doctrine1/zipball/88903e2d7d82852ec9b80ccbf02bd8e6fa2cbec6",
+            "reference": "88903e2d7d82852ec9b80ccbf02bd8e6fa2cbec6",
+            "shasum": ""
+        },
+        "require": {
+            "ext-pdo": "*",
+            "php": ">=5.2.3"
+        },
+        "time": "2012-04-01T17:53:05+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Doctrine_": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL"
+        ],
+        "authors": [
+            {
+                "name": "Konsta Vesterinen",
+                "email": "kvesteri@cc.hut.fi"
+            },
+            {
+                "name": "Jonathan Wage",
+                "email": "jonwage@gmail.com"
+            }
+        ],
+        "description": "PHP5 Database ORM",
+        "homepage": "http://www.doctrine-project.org",
+        "keywords": [
+            "database",
+            "orm"
+        ]
+    }
+]
