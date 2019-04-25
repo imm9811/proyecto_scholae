@@ -1,0 +1,5 @@
+{
+    "require": {
+        "doctrine/doctrine1": "^1.2"
+    }
+}

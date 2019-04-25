@@ -55,7 +55,7 @@
 <logicalDatatype>LOGDT025</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_ " id="248666BA-84B2-FD5F-E4E6-B3DEF5CA6CF5">
+<Attribute name="id_pp" id="248666BA-84B2-FD5F-E4E6-B3DEF5CA6CF5">
 <createdBy>usuario</createdBy>
 <createdTime>2019-04-24 22:03:48 UTC</createdTime>
 <generatorID>25040705-783A-2B14-43CE-AB7B2951A473</generatorID>
@@ -64,6 +64,20 @@
 <item key="F285407D-3782-03B8-5632-1DE9C0377356" value="true"/>
 </engineerTo>
 <referedAttribute>8941D145-CD4C-989D-E357-F4864AEB9313</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_pp_aside" id="75B2869E-71F6-87F9-313B-DFF4CE1D8F51">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 18:02:54 UTC</createdTime>
+<generatorID>64663805-D978-06B4-04B2-D5EEC2929834</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<engineerTo>
+<item key="F285407D-3782-03B8-5632-1DE9C0377356" value="true"/>
+</engineerTo>
+<referedAttribute>8C649D2E-3885-34C9-B2DE-E52516B55D2C</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>

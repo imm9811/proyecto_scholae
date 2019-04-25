@@ -67,6 +67,34 @@
 <dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="archivo" id="9AF0270C-60E3-87B1-0715-D6784B0F30CD">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 18:30:15 UTC</createdTime>
+<ownerDesignName>er2</ownerDesignName>
+<engineerTo>
+<item key="F285407D-3782-03B8-5632-1DE9C0377356" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_pp" id="74DC5D3A-781B-67D1-7767-3659F839786A">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 19:49:51 UTC</createdTime>
+<generatorID>F19EAC68-7EF4-F64C-6E49-44B46624BFE1</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<engineerTo>
+<item key="F285407D-3782-03B8-5632-1DE9C0377356" value="true"/>
+</engineerTo>
+<referedAttribute>8941D145-CD4C-989D-E357-F4864AEB9313</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="77AD9F82-FF9F-B876-FEA9-94E5EB8CEFC9" name="pantallas PK">

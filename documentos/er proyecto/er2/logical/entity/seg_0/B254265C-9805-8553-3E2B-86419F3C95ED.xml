@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B254265C-9805-8553-3E2B-86419F3C95ED" name="pp_aside">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 17:46:54 UTC</createdTime>
+<ownerDesignName>er2</ownerDesignName>
+<engineerTo>
+<item key="F285407D-3782-03B8-5632-1DE9C0377356" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_pp_aside" id="8C649D2E-3885-34C9-B2DE-E52516B55D2C">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 17:46:54 UTC</createdTime>
+<ownerDesignName>er2</ownerDesignName>
+<engineerTo>
+<item key="F285407D-3782-03B8-5632-1DE9C0377356" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="titulo" id="5922DEE1-B0BF-1563-9325-4DDE47BA70C6">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 17:46:54 UTC</createdTime>
+<ownerDesignName>er2</ownerDesignName>
+<engineerTo>
+<item key="F285407D-3782-03B8-5632-1DE9C0377356" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="C465A739-B77D-A373-C58F-8CFA347D029E">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 17:46:54 UTC</createdTime>
+<ownerDesignName>er2</ownerDesignName>
+<engineerTo>
+<item key="F285407D-3782-03B8-5632-1DE9C0377356" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="foto" id="B41CD34F-7299-6EA9-3A67-F32F304C9593">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 17:46:54 UTC</createdTime>
+<ownerDesignName>er2</ownerDesignName>
+<engineerTo>
+<item key="F285407D-3782-03B8-5632-1DE9C0377356" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="archivo" id="48821A29-769C-4FF2-D624-ED1568D183A7">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 17:46:54 UTC</createdTime>
+<ownerDesignName>er2</ownerDesignName>
+<engineerTo>
+<item key="F285407D-3782-03B8-5632-1DE9C0377356" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="357EAD43-D875-4940-4981-37C89E75E57B" name="panel principal PK">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 17:46:54 UTC</createdTime>
+<ownerDesignName>er2</ownerDesignName>
+<engineerTo>
+<item key="F285407D-3782-03B8-5632-1DE9C0377356" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8C649D2E-3885-34C9-B2DE-E52516B55D2C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
