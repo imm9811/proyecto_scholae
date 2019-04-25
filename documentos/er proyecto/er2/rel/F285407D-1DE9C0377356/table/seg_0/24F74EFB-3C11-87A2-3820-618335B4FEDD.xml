@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="24F74EFB-3C11-87A2-3820-618335B4FEDD" name="noticias">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<generatorID>3EFE6311-2D4A-3205-BD63-66CFA0F70E05</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="C41B1BF7-C250-520C-F695-93A60827F3BC">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<generatorID>0449F07D-AD47-F92F-63EC-AB128E9F6F09</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="titulo" id="A48F18E5-8BDC-AD88-1308-CBA905469198">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<generatorID>E03B6490-97C9-5234-F9DE-12A8791680AF</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="FC9A2984-27F3-661F-74C0-95056E7B6D2E">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<generatorID>76A1DD13-7D0D-D8E4-EF20-7F74D2FD7CCE</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="foto" id="F4D82161-66EE-FCF6-7918-8D7C46CAE0EF">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<generatorID>9E994FFE-4A93-7C1D-D819-9E88297D3719</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="archivo" id="22BD1707-23D1-026C-C240-B2551E15C85C">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<generatorID>9AF0270C-60E3-87B1-0715-D6784B0F30CD</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="panel_principal_id_pp" id="B4A2475A-1A39-F2C2-E507-60038A82E417">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<generatorID>74DC5D3A-781B-67D1-7767-3659F839786A</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6110030F-9E9D-0581-6D47-EBC4FDA2C7A2" referredColumn="0917F3EC-3612-2BB5-5520-97228657AD41"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="957D7AD6-A9D5-A955-88A5-AE22D8B4A69E" name="noticias_PK">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<generatorID>77AD9F82-FF9F-B876-FEA9-94E5EB8CEFC9</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C41B1BF7-C250-520C-F695-93A60827F3BC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D19FFE34-5853-364D-982D-33AACA892F58" name="noticias__IDX">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<ownerDesignName>er2</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>F19EAC68-7EF4-F64C-6E49-44B46624BFE1</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="B4A2475A-1A39-F2C2-E507-60038A82E417"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A21CF058-113C-B98B-283F-86A11F84C48C" name="noticias_panel_principal_FK">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<generatorID>F19EAC68-7EF4-F64C-6E49-44B46624BFE1</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B4A2475A-1A39-F2C2-E507-60038A82E417"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

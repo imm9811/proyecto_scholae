@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_ " id="8941D145-CD4C-989D-E357-F4864AEB9313">
+<Attribute name="id_pp" id="8941D145-CD4C-989D-E357-F4864AEB9313">
 <createdBy>Ismael</createdBy>
 <createdTime>2019-04-07 17:31:30 UTC</createdTime>
 <ownerDesignName>er2</ownerDesignName>
@@ -27,49 +27,7 @@
 <logicalDatatype>LOGDT025</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="titulo" id="49C88CBA-E476-3791-516D-10061C671F67">
-<createdBy>Ismael</createdBy>
-<createdTime>2019-04-07 17:31:44 UTC</createdTime>
-<ownerDesignName>er2</ownerDesignName>
-<engineerTo>
-<item key="F285407D-3782-03B8-5632-1DE9C0377356" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50 CHAR</dataTypeSize>
-<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="descripcion" id="BFB1AD34-5F1E-C90A-1A9A-A002EC2C57A9">
-<createdBy>Ismael</createdBy>
-<createdTime>2019-04-07 17:40:29 UTC</createdTime>
-<ownerDesignName>er2</ownerDesignName>
-<engineerTo>
-<item key="F285407D-3782-03B8-5632-1DE9C0377356" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>250</dataTypeSize>
-<ownDataTypeParameters>250,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="foto" id="213C5A0F-8CEE-9FFF-9E20-A16CB97B4061">
-<createdBy>Ismael</createdBy>
-<createdTime>2019-04-07 17:41:06 UTC</createdTime>
-<ownerDesignName>er2</ownerDesignName>
-<engineerTo>
-<item key="F285407D-3782-03B8-5632-1DE9C0377356" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50 CHAR</dataTypeSize>
-<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="enlace" id="52677377-0381-673B-D54D-E42D13DC0AE8">
+<Attribute name="valor" id="52677377-0381-673B-D54D-E42D13DC0AE8">
 <createdBy>Ismael</createdBy>
 <createdTime>2019-04-07 18:18:26 UTC</createdTime>
 <ownerDesignName>er2</ownerDesignName>
@@ -79,9 +37,8 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>300 CHAR</dataTypeSize>
-<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

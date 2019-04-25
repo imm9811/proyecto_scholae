@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AB73CBBA-578E-4227-4CF4-BE1052A87CD3" name="pp_aside">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<generatorID>B254265C-9805-8553-3E2B-86419F3C95ED</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_pp_aside" id="160CFF96-04F4-4031-3379-B88B28FFBE4D">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<generatorID>8C649D2E-3885-34C9-B2DE-E52516B55D2C</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="titulo" id="92D8FCB9-4E45-A449-E85A-C8B69C2FDD1A">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<generatorID>5922DEE1-B0BF-1563-9325-4DDE47BA70C6</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="4F36E177-47B3-DDC0-8118-E654588834EB">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<generatorID>C465A739-B77D-A373-C58F-8CFA347D029E</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="foto" id="59B40EA4-EEF2-1734-CD2C-8EB1C50DD3B9">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<generatorID>B41CD34F-7299-6EA9-3A67-F32F304C9593</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="archivo" id="D7DF6342-1326-B3CF-87D2-8406CC6846AB">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<generatorID>48821A29-769C-4FF2-D624-ED1568D183A7</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="21380D6F-9D49-AF19-253E-81E1D5BD2A78" name="pp_aside_PK">
+<createdBy>usuario</createdBy>
+<createdTime>2019-04-25 20:07:47 UTC</createdTime>
+<generatorID>357EAD43-D875-4940-4981-37C89E75E57B</generatorID>
+<ownerDesignName>er2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="160CFF96-04F4-4031-3379-B88B28FFBE4D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

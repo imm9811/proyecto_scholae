@@ -15,6 +15,18 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="74BC2446-B3E0-C5F4-5A47-13BC2609015A">
+<createdBy>Ismael</createdBy>
+<createdTime>2019-04-07 17:28:08 UTC</createdTime>
+<ownerDesignName>er2</ownerDesignName>
+<engineerTo>
+<item key="F285407D-3782-03B8-5632-1DE9C0377356" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="nombre" id="96B8AE7C-96B4-12B6-716A-04032BE8EF5B">
 <createdBy>Ismael</createdBy>
 <createdTime>2019-04-07 17:27:38 UTC</createdTime>
@@ -26,18 +38,6 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id" id="74BC2446-B3E0-C5F4-5A47-13BC2609015A">
-<createdBy>Ismael</createdBy>
-<createdTime>2019-04-07 17:28:08 UTC</createdTime>
-<ownerDesignName>er2</ownerDesignName>
-<engineerTo>
-<item key="F285407D-3782-03B8-5632-1DE9C0377356" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="correo" id="7ACB940B-1FDF-71A6-4F88-EA67DBC16ADE">
@@ -53,7 +53,7 @@
 <dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nombreUsuario" id="DF42C70D-79F3-D5CB-3D03-45B8C1DB48E9">
+<Attribute name="username" id="DF42C70D-79F3-D5CB-3D03-45B8C1DB48E9">
 <createdBy>Ismael</createdBy>
 <createdTime>2019-04-07 17:29:03 UTC</createdTime>
 <ownerDesignName>er2</ownerDesignName>
