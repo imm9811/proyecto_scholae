@@ -6,12 +6,8 @@
 
 
 CREATE TABLE administradores (
-    id          CHAR 
---  WARNING: CHAR size not specified 
-     NOT NULL,
-    nombre      VARCHAR2 
---  ERROR: VARCHAR2 size not specified 
-    ,
+    id          INTEGER NOT NULL,
+    nombre      VARCHAR2(50 CHAR),
     correo      VARCHAR2(50 CHAR) NOT NULL,
     username    VARCHAR2 
 --  ERROR: VARCHAR2 size not specified 
@@ -38,9 +34,7 @@ CREATE TABLE categorias (
 ALTER TABLE categorias ADD CONSTRAINT categorias_pk PRIMARY KEY ( id_categoria );
 
 CREATE TABLE noticias (
-    id                      CHAR 
---  WARNING: CHAR size not specified 
-     NOT NULL,
+    id                      INTEGER NOT NULL,
     titulo                  VARCHAR2(50) NOT NULL,
     descripcion             VARCHAR2(500 CHAR) NOT NULL,
     foto                    VARCHAR2(50 CHAR),
@@ -58,18 +52,14 @@ CREATE UNIQUE INDEX noticias__idx ON
 ALTER TABLE noticias ADD CONSTRAINT noticias_pk PRIMARY KEY ( id );
 
 CREATE TABLE panel_principal (
-    id_pp   CHAR 
---  WARNING: CHAR size not specified 
-     NOT NULL,
+    id_pp    INTEGER NOT NULL,
     valor   INTEGER
 );
 
 ALTER TABLE panel_principal ADD CONSTRAINT panel_principal_pk PRIMARY KEY ( id_pp );
 
 CREATE TABLE pp_aside (
-    id_pp_aside   CHAR 
---  WARNING: CHAR size not specified 
-     NOT NULL,
+    id_pp_aside    INTEGER NOT NULL,
     titulo        VARCHAR2(50 CHAR),
     descripcion   VARCHAR2(250),
     foto          VARCHAR2(50 CHAR),
