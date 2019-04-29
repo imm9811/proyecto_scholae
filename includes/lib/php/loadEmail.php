@@ -53,11 +53,11 @@ function enviarEmail($mail_para, $nombre_plantilla, $asunto_mail, $parametros, $
     ////////
     $mail = new phpmailer();
     $mail->IsSMTP();
-    $mail->Host = "192.168.100.8";
+    $mail->Host = "ESTABLECER";
     $mail->IsSendmail();
     $mail->SMTPAuth   = true;
     $mail->Username = 'no-reply@'.$emailFrom;
-    $mail->Password = 'zB]+OcHwS43!';
+    $mail->Password = 'ESTABLECER';
     if($mail_de=="") $mail->From = 'info@'.$emailFrom;
     else $mail->From = $mail_de;
     $mail->FromName = $emailFromName;

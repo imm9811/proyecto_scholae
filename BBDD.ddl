@@ -3,80 +3,48 @@
 --   sitio:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
 
+create Database if not exists scholae;
 
-
-CREATE TABLE administradores (
-    id          CHAR 
---  WARNING: CHAR size not specified 
-     NOT NULL,
-    nombre      VARCHAR2 
---  ERROR: VARCHAR2 size not specified 
-    ,
-    correo      VARCHAR2(50 CHAR) NOT NULL,
-    username    VARCHAR2 
---  ERROR: VARCHAR2 size not specified 
-     NOT NULL,
-    apellidos   VARCHAR2(50 CHAR)
+CREATE TABLE if not exists administradores (
+    id          INTEGER NOT NULL auto_increment PRIMARY KEY,
+    nombre      varchar(50),
+    correo      varchar(50) NOT NULL,
+    contrasena  text not null,
+    username    varchar(50) NOT NULL,
+    apellidos   varchar(50)
 );
 
-ALTER TABLE administradores ADD CONSTRAINT administradores_pk PRIMARY KEY ( id );
-
-CREATE TABLE categorias (
-    id_categoria            INTEGER NOT NULL,
-    nom_categoria           VARCHAR2(50 CHAR),
-    noticias_id             CHAR 
---  WARNING: CHAR size not specified 
-     NOT NULL,
-    panel_principal_id_pp   CHAR 
---  WARNING: CHAR size not specified 
-     NOT NULL,
-    pp_aside_id_pp_aside    CHAR 
---  WARNING: CHAR size not specified 
-     NOT NULL
+CREATE TABLE if not exists categorias (
+    id_categoria            INTEGER NOT NULL auto_increment PRIMARY KEY,
+    nom_categoria           varchar(50),
+    noticias_id             INTEGER not null,
+    panel_principal_id_pp   INTEGER not null, 
+    pp_aside_id_pp_aside    INTEGER not null
 );
 
-ALTER TABLE categorias ADD CONSTRAINT categorias_pk PRIMARY KEY ( id_categoria );
 
-CREATE TABLE noticias (
-    id                      CHAR 
---  WARNING: CHAR size not specified 
-     NOT NULL,
-    titulo                  VARCHAR2(50) NOT NULL,
-    descripcion             VARCHAR2(500 CHAR) NOT NULL,
-    foto                    VARCHAR2(50 CHAR),
-    archivo                 VARCHAR2(50 CHAR),
-    panel_principal_id_pp   CHAR 
---  WARNING: CHAR size not specified 
-     NOT NULL
+CREATE TABLE if not exists noticias (
+    id                      INTEGER NOT NULL auto_increment PRIMARY KEY,
+    titulo                  varchar(50) NOT NULL,
+    descripcion             text NOT NULL,
+    foto                    varchar(50),
+    archivo                 varchar(50),
+    panel_principal_id_pp   INTEGER not null
 );
 
-CREATE UNIQUE INDEX noticias__idx ON
-    noticias (
-        panel_principal_id_pp
-    ASC );
 
-ALTER TABLE noticias ADD CONSTRAINT noticias_pk PRIMARY KEY ( id );
-
-CREATE TABLE panel_principal (
-    id_pp   CHAR 
---  WARNING: CHAR size not specified 
-     NOT NULL,
+CREATE TABLE if not exists panel_principal (
+    id_pp    INTEGER NOT NULL auto_increment PRIMARY KEY,
     valor   INTEGER
 );
 
-ALTER TABLE panel_principal ADD CONSTRAINT panel_principal_pk PRIMARY KEY ( id_pp );
-
 CREATE TABLE pp_aside (
-    id_pp_aside   CHAR 
---  WARNING: CHAR size not specified 
-     NOT NULL,
-    titulo        VARCHAR2(50 CHAR),
-    descripcion   VARCHAR2(250),
-    foto          VARCHAR2(50 CHAR),
-    archivo       VARCHAR2(300 CHAR)
+    id_pp_aside    INTEGER NOT NULL auto_increment PRIMARY KEY,
+    titulo        varchar(50),
+    descripcion   varchar(250),
+    foto          varchar(100),
+    archivo       varchar(300)
 );
-
-ALTER TABLE pp_aside ADD CONSTRAINT pp_aside_pk PRIMARY KEY ( id_pp_aside );
 
 ALTER TABLE categorias
     ADD CONSTRAINT categorias_noticias_fk FOREIGN KEY ( noticias_id )
@@ -138,3 +106,11 @@ ALTER TABLE noticias
 -- 
 -- ERRORS                                   2
 -- WARNINGS                                 8
+
+--CREATE UNIQUE INDEX noticias__idx ON--
+      --noticias (--
+        --panel_principal_id_pp--
+    --ASC );--
+
+--ALTER TABLE noticias ADD CONSTRAINT noticias_pk PRIMARY KEY ( id );--
+""
