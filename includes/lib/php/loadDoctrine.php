@@ -1,9 +1,9 @@
 <?php
 $bd_config = new stdClass;
 $bd_config->host = 'localhost';
-$bd_config->user = 'dueling_user';
-$bd_config->pass = 'H00Vhnf-H1(3';
-$bd_config->db = 'dueling_mysql';
+$bd_config->user = 'root';
+$bd_config->pass = '';
+$bd_config->db = 'scholae';
 
 // OJO , revisar una vez puesto en produccion
 $pathToModels = dirname(__FILE__) . '/../models';

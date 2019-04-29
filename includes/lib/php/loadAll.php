@@ -14,13 +14,17 @@ date_default_timezone_set('Europe/Madrid');
 setlocale(LC_ALL, "es_ES"); //idioma de los date() en español
 
 //Cargamos resto de librerias php
+// $php_libs = array(
+//     "loadDoctrine.php",
+//     "loadOthers.php",
+//     "loadEmail.php",
+//     "loadForms.php"
+// );
 $php_libs = array(
-    "loadDoctrine.php",
+	"loadDoctrine.php",
     "loadOthers.php",
-    "loadEmail.php",
     "loadForms.php"
 );
-
 foreach ($php_libs as $pathlib) {
     include_once $pathlib;
 }
