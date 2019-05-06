@@ -244,6 +244,7 @@ p {
   background-color: white;
   padding-right: 5.7px;
   color: #eee;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   transition: opacity 300ms ease-in, visibility 0s ease-in 300ms; }
   .header nav, .header ul {
     height: 100%; }
@@ -292,12 +293,14 @@ p {
   padding: 20px;
   overflow-x: hidden;
   overflow-y: auto;
-  border-right: 1px solid #eee; }
+  border-right: 1px solid #eee;
+  text-align: center; }
 
 footer {
   background-color: black;
   margin-top: 10%;
-  padding: 5%; }
+  padding: 5%;
+  width: 100%; }
 
 .cuerpo {
   position: relative;
@@ -305,7 +308,8 @@ footer {
 
 .texto_principal {
   position: relative;
-  margin: 10px; }
+  margin-left: 10px;
+  margin-right: 10px; }
 
 .carousel-caption {
   margin-bottom: 5%; }
@@ -325,7 +329,7 @@ aside {
     #plataformas img:hover {
       transform: scale(1.25); }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 920px) {
   .mobile-bar {
     display: none; }
 
@@ -361,6 +365,12 @@ aside {
 
   source {
     height: 430px; } }
+.especial {
+  display: none; }
+
+.footer-certificados {
+  display: inline-flex; }
+
 /*PARA ORDENADOR*/
 @media only screen and (max-width: 900px) {
   .testFade {

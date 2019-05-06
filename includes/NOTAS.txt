@@ -1,0 +1,13 @@
+!-------------NOTAS---------------------¡
+
+
+Cada vez que se genere una bd con doctrine
+1.- crear nuestra bd, y las tablas que tengamos
+
+2.- el archivo union_mysql la importamos dentro nuestra bd, ya que incorpora
+las tablas de configuracion para doctrine
+
+
+
+Cada vez que que haya un cambio de estrucutra en las tablas como un nuevo campo o algo por el estilo
+hay que hacer un ?generarModelos, para que se apliquen los cambios si no petan

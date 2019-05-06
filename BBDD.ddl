@@ -3,7 +3,7 @@
 --   sitio:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
 
-create Database if not exists scholae;
+create database if not exists scholae;
 
 CREATE TABLE if not exists administradores (
     id          INTEGER NOT NULL auto_increment PRIMARY KEY,
@@ -38,12 +38,19 @@ CREATE TABLE if not exists panel_principal (
     valor   INTEGER
 );
 
-CREATE TABLE pp_aside (
+CREATE  TABLE if not exists pp_aside (
     id_pp_aside    INTEGER NOT NULL auto_increment PRIMARY KEY,
     titulo        varchar(50),
     descripcion   varchar(250),
     foto          varchar(100),
     archivo       varchar(300)
+);
+
+CREATE  TABLE if not exists plataformas (
+    id_plataforma    INTEGER NOT NULL auto_increment PRIMARY KEY,
+ 	titulo    varchar(50),
+ 	foto      text,
+ 	descripcion varchar(50) 
 );
 
 ALTER TABLE categorias

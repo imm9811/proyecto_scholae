@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 $bd_config = new stdClass;
 $bd_config->host = 'localhost';
 $bd_config->user = 'root';
