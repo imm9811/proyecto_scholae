@@ -111,7 +111,7 @@ body {
 
 	<div class="login-page">
 	  <div class="form">
-    <div><img src="imagenes/logo.png"></div>
+    <div><img src="../imagenes/logo.png"></div>
     <?php
     /* 
     <form class="register-form" method="post" action="index.php?page=checkin">
@@ -128,6 +128,7 @@ body {
       ?>
 
 	    <form class="login-form" method="post" action="index.php?page=checkin">
+        <input type="hidden" name="login" value="login"/>
 	      <input type="text" name="user" placeholder="nombre de usuario o email"/>
 	      <input type="password" name="contraseña" placeholder="contraseña"/>
         <button>Iniciar sesión</button>

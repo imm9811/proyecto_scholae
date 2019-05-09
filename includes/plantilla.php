@@ -62,7 +62,7 @@
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="includes/index.php?page=plataformas">Plataformas</a></li>
+            <li><a href="index.php?page=plataformas">Plataformas</a></li>
 
           </ul>
         </nav>
@@ -78,34 +78,21 @@
     <div class="row">
       <nav id="sidebar" class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
         <ul class="nav nav-pills flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Overview <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Reports</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Certificados</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacta</a>
-          </li>
-        </ul>
+        <li class="nav-item">
+						<a class="nav-link active" href="#">Overview <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.php?page=home">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Certificados</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.php?page=contacto">Contacta</a>
+					</li>
+				</ul>
 
-        <ul class="nav nav-pills flex-column">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Nav item</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Nav item again</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">One more nav</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Another nav item</a>
-          </li>
-        </ul>
+				
       </nav>
 
     

@@ -8,17 +8,17 @@ if(isset($_GET['exit'])){
 //ini_set('display_errors', 1);
 error_reporting(E_ALL ^ E_NOTICE);
 date_default_timezone_set('Europe/Madrid');
-setlocale(LC_ALL, "es_ES"); //idioma de los date() en español
+setlocale(LC_ALL, "es_ES"); //idioma de los date() en espaï¿½ol
 ini_set('default_charset', 'utf-8');
 
 /*
-//Creamos variable de sesión con el lenguaje
+//Creamos variable de sesiï¿½n con el lenguaje
 $lenguas_permitidas=array('es','en'); //listado de lenguajes a usar
 if(isset($_REQUEST['lang'])){
 	//se recibimos un lenguaje lo ponemos en sesion, en minusculas y sin espacios y sin ningun caracter que no sea numero o letra
 	$_SESSION['lang'] = strtolower(trim(preg_replace('([^A-Za-z0-9])', '', $_REQUEST['lang'])));
 	if(!in_array($_SESSION['lang'], $lenguas_permitidas) || $_SESSION['lang']=='es'){
-		$_SESSION['lang'] = ''; //si no es un lenguaje permitido o si es español, lo dejamos a vacio
+		$_SESSION['lang'] = ''; //si no es un lenguaje permitido o si es espaï¿½ol, lo dejamos a vacio
 	}	
 }else{
 	$_SESSION['lang'] = ''; //si no enviamos lenguaje, lo dejamos a vacio

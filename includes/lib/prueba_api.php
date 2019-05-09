@@ -1,13 +1,17 @@
 <?php
 
-include('lib/php/loadAll.php');
+include('php/loadAll.php');
 
 //$apiMethod = $_POST['apimethod'];
-$apiMethod = "login";
+$apiMethod = $_POST['apiMethod'];
 
 if (isset($apiMethod)) {
   switch ($apiMethod) {
     case 'login': {
+      $username_email=$_POST['usuario'];
+      $password=$_POST['contrasena'];
+      
+      
         if (!isset($username)  && !isset($password)) {
           $user = Doctrine_Query::create()->from('Administradores')
             ->where('username = ?', $username_email)

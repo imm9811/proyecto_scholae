@@ -49,6 +49,18 @@ h1 {
   .placeholders img {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem; }
+  .placeholders button {
+    padding: 0;
+    border: none;
+    background: none; }
+  .placeholders .fa-cloud-upload {
+    color: #2AFF05; }
+
+.mostrar {
+  display: block; }
+
+.ocultar {
+  display: none; }
 
 .highlight {
   background-color: yellow; }

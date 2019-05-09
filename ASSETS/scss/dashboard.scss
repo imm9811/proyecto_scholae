@@ -60,8 +60,21 @@ body {
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
       }
+    button{
+      padding: 0;
+      border: none;
+      background: none;
+    }
+    .fa-cloud-upload{
+      color: #2AFF05;
+    }
   } 
-  
+  .mostrar{
+    display: block;
+  }
+  .ocultar{
+    display: none;
+  }
   .highlight { background-color: yellow }
   
   @media (min-width: 992px){
