@@ -4,26 +4,26 @@
 
         <section class="row text-center placeholders">
           <div class="col-6 col-sm-4 placeholder">
-         <button onclick="añadirPlataforma()"><i class="fa fa-cloud-upload" style="font-size:150px"></i>
+         <button id="añadirAdministrador" class="añadirObject"><i class="fa fa-cloud-upload"></i>
             <h4>Añadir</h4>
             </button>
           </div>
           <div class="col-6 col-sm-4 placeholder">
-         <button id="listarPlataforma"><i class="fa fa-book" style="font-size:150px"></i>
+         <button id="listarAdministrador" class="listarObject"><i class="fa fa-book"></i>
             <h4>Listar</h4>
             </button>
           </div>
          
           
         </section>
-        <div id="controladorListar" class="mostrar">
+        <div id="controladorListar" class="listar mostrar ">
           <?php
-            include 'listarPlataformas.php';
+            include 'listarAdministradores.php';
           ?>
         </div>
-        <div id="controladorAñadir" class="mostrar">
+        <div id="controladorAñadir" class="añadir ocultar">
           <?php
-            include 'añadirPlataformas.php';
+            include 'addAdministradores.php';
           ?>
         </div>
       </main>

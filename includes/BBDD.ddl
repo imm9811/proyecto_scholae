@@ -15,7 +15,7 @@ CREATE TABLE if not exists administradores (
 );
 
 CREATE TABLE if not exists categorias (
-    id_categoria            INTEGER NOT NULL auto_increment PRIMARY KEY,
+    id           INTEGER NOT NULL auto_increment PRIMARY KEY,
     nom_categoria           varchar(50),
     noticias_id             INTEGER not null,
     panel_principal_id_pp   INTEGER not null, 
@@ -39,7 +39,7 @@ CREATE TABLE if not exists panel_principal (
 );
 
 CREATE  TABLE if not exists pp_aside (
-    id_pp_aside    INTEGER NOT NULL auto_increment PRIMARY KEY,
+    id    INTEGER NOT NULL auto_increment PRIMARY KEY,
     titulo        varchar(50),
     descripcion   varchar(250),
     foto          varchar(100),
@@ -47,7 +47,7 @@ CREATE  TABLE if not exists pp_aside (
 );
 
 CREATE  TABLE if not exists plataformas (
-    id_plataforma    INTEGER NOT NULL auto_increment PRIMARY KEY,
+    id    INTEGER NOT NULL auto_increment PRIMARY KEY,
  	titulo    varchar(50),
  	foto      text,
  	descripcion varchar(50) 

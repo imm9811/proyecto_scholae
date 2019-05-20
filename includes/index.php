@@ -4,10 +4,9 @@ $page = $_GET["page"];
 switch ($page) {
 	case 'login':
 		header("location: login-register.php");
-		//header('location: intranet/index.php?page=plataforma');
 		break;
 	case 'home':
-		header("location: index.html");
+		header("location: indice.html");
 		break;
 	case 'plataformas':
 		//header("location: ../plataformas.html");
@@ -26,7 +25,7 @@ switch ($page) {
 
 	case 'checkin':
 		//echo "entro";
-		if (isset($_POST['user'])) {
+		if (isset($_POST['user']) and isset($_POST['contraseña'])  ) {
 			//echo "dentro del if";
 			$usuario = $_POST['user'];
 			$contrasena = $_POST['contraseña'];
@@ -41,20 +40,18 @@ switch ($page) {
 					console.log(data);
 					if(data['type']=='ok'){
 						console.log(data);
-						window.location.href = "intranet/index.php?page=plataformas";
+						window.location.href = "intranet/index.php?page=Administradores";
 					}
 					if(data['type']=='error'){
-						window.location.href = "index.php?page=home";	
+						window.location.href = "index.php?page=login";	
 					}
 					
 				}
 			});
 		</script>
 	<?php
-
-	//header("location:lib/prueba_api.php?apiMethod=login");
 }
-//&user=".$_POST['user']."&password=".$_POST['contraseña']."
+
 break;
 }
 

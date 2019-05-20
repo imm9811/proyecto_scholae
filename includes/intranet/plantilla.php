@@ -15,36 +15,21 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="../../assets/css/dashboard.css">
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
     integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
     crossorigin="anonymous"></script>
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
   <script language="javascript" type="text/javascript" src="../../plugins/BUSCADOR/jquery.dynacloud-5.js"></script>
-  
-  <script>
+  <script src="site_footer.js"></script>
 
-$(document).ready(function(){
-    $("#buscador").click(function(){
-    console.log($("#input-search").val());
-     $("#input-search").val()==""? $(".highlight").css("background-color", "initial"):$('body').highlight($("#input-search").val()); 
-      
-    });      
+<?php   include('../lib/php/loadAll.php'); ?>
 
-$("#listarPlataforma").click(function(){
-   $("#controladorListar").toggleClass("mostrar ocultar");
-   $("#controladorAñadir").toggleClass("ocultar");
-    });
-});
-          
-  </script>
 </head>
 <!--https://v4-alpha.getbootstrap.com/examples/dashboard/-->
 
@@ -82,19 +67,22 @@ $("#listarPlataforma").click(function(){
       <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
         <ul class="nav nav-pills flex-column">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Noticias <span class="sr-only">Noticias</span></a>
+            <a class="nav-link active" href="index.php?page=Noticias">Noticias <span class="sr-only">Noticias</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?page=plataforma">Noticias Lateral</a>
+            <a class="nav-link" href="index.php?page=Noticias_lateral">Noticias Lateral</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Categorias</a>
+            <a class="nav-link" href="index.php?page=Plataformas">Plataformas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?page=Categorias">Categorias</a>
           </li>
         </ul>
 
         <ul class="nav nav-pills flex-column">
           <li class="nav-item">
-            <a class="nav-link" href="#">Administradores</a>
+            <a class="nav-link" href="index.php?page=Administradores">Administradores</a>
         </li>
           
           <li class="nav-item">
@@ -103,6 +91,10 @@ $("#listarPlataforma").click(function(){
           <li class="nav-item">
             <a class="nav-link" target="_blank" href="https://tagmanager.google.com/#/container/accounts/4701925741/containers/11871666/workspaces/1">Google Task</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="http://localhost/phpmyadmin/db_structure.php?server=1&db=scholae">Base de datos</a>
+          </li>
+          
         </ul>
       </nav>
 

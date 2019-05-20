@@ -3,55 +3,33 @@
 include('php/loadAll.php');
 
 //$apiMethod = $_POST['apimethod'];
-$apiMethod = $_POST['apiMethod'];
-
+//$apiMethod = $_POST['apiMethod'];
+$apiMethod="prueba";
+$password=123;
 if (isset($apiMethod)) {
   switch ($apiMethod) {
-    case 'login': {
-      $username_email=$_POST['usuario'];
-      $password=$_POST['contrasena'];
-      
-      
-        if (!isset($username)  && !isset($password)) {
-          $user = Doctrine_Query::create()->from('Administradores')
-            ->where('username = ?', $username_email)
-            ->orWhere('email = ?', $username_email)
-            ->execute()
-            ->getFirst();
+      case 'prueba':{
+        
+        $username_email='alfonso';
+        $user = Doctrine_Query::create()->from('Administradores')
+        ->where('username = ?', $username_email)
+        ->orWhere('correo = ?', $username_email)
+        ->execute()
+        ->getFirst();
 
-          if (password_verify($password, $user->password) == true) {
-            //hace que las cookie solo dure un dia
-            session_start([
-              'cookie_lifetime' => 86400,
-              'read_and_close'  => true
-            ]);
-            $_SESSION['id'] = $rows[0]['id'];
-            $_SESSION['email'] = $rows[0]['email'];
-            //$_SESSION['session_id'] = session_id();
 
-            header("location: ../home.php?page=menu");
-            header('Content-type: application/json');
-            echo json_encode(['type' => 'error', 'data' => 'error en la contraseña, repitala por favor...']);
-
-            //aqui que hago xD
-
-          }
+        if(password_verify($password, $user->contrasena) == true){
+          echo $user->nombre;
         }
-        ?>
-      <div>
-        <?php
-
-        foreach ($reg as $key => $value) {
-
-          echo "<div>$value</div>";
+        if(!isset($user->nombre)){
+          echo "null";
         }
-
-        ?>
-      </div> <?php
-              break;
-            }
+        else{
+         echo $user->id;
         }
+        break;
       }
+    }
+  }
 
-
-      ?>
+?>
