@@ -22,7 +22,7 @@ $page=$_GET["page"];
 	
 		
 		case 'Categorias':
-			include 'noticias/ctlCategorias.php';
+			include 'categorias/ctlCategorias.php';
 			//include 'panel.html';
 		break;
 		case 'Administradores':

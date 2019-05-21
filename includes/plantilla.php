@@ -44,7 +44,7 @@
 
   });
 </script>
-
+<?php   include('lib/php/loadAll.php'); ?>
 <body scroll="no">
   <!--Main Navigation https://codepen.io/illdapt/pen/amdQmg	https://codepen.io/web-tiki/pen/HhCyd  https://codepen.io/conorjmcnamara/pen/dLNdRo?&page=1    https://mdbootstrap.com/snippets/jquery/temp/590618?action=prism_export-->
   <!--HEADER-->

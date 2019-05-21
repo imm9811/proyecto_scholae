@@ -1,4 +1,4 @@
-!-------------NOTAS---------------------¡
+!-------------NOTAS---------------------ï¿½
 
 
 Cada vez que se genere una bd con doctrine
@@ -11,3 +11,5 @@ las tablas de configuracion para doctrine
 
 Cada vez que que haya un cambio de estrucutra en las tablas como un nuevo campo o algo por el estilo
 hay que hacer un ?generarModelos, para que se apliquen los cambios si no petan
+ESTO SE DEBE PONER 
+http://localhost/proyecto_scholae/includes/intranet/index.php?generarModelos

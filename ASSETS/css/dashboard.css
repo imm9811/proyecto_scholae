@@ -137,13 +137,6 @@ form td button {
 .formulario__label {
   text-align: left; }
 
-#enviar {
-  width: 160px;
-  position: relative;
-  left: 85%;
-  bottom: 400px;
-  height: 70px; }
-
 .editarFormulario {
   position: relative;
   left: 6%; }

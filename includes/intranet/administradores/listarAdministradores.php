@@ -1,3 +1,12 @@
+<style>
+#enviar{
+  width: 160px;
+  position: relative;
+  left: 85%; 
+  bottom: 350px;
+  height: 70px;
+}
+</style>
 <h2>Listado de Administradores</h2>
 <div class="table-responsive">
   <form role="form" action="" method="post" enctype="multipart/form-data">
@@ -18,7 +27,7 @@
         <?php $arrayAdministradores = Doctrine_Query::create()->from('Administradores')
           ->execute();
           $longArray =count($arrayAdministradores);
-          if ($longArray!=0 || !empty($arrayAdministradores)) {
+          if ($longArray!=0) {
 
           foreach ($arrayAdministradores as $administrador) {
             //echo "$administrador->nombre $administrador->id";
