@@ -14,26 +14,11 @@
 
                     </div>
                     <div class="col-lg-5">
-                        <div class="mapouter">
-                            <div class="gmap_canvas"><iframe width="600" height="436" id="gmap_canvas"
+                        
+                            <div class="map-responsive"><iframe id="gmap_canvas"
                                     src="https://maps.google.com/maps?q=ies%20romero%20vargas&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>Google Maps
-                                Generator by <a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div>
-                            <style>
-                                .mapouter {
-                                    position: relative;
-                                    text-align: right;
-                                    height: 436px;
-                                    width: 600px;
-                                }
-
-                                .gmap_canvas {
-                                    overflow: hidden;
-                                    background: none !important;
-                                    height: 436px;
-                                    width: 600px;
-                                }
-                            </style>
+                                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+                        
                         </div>
                     </div>
                     <div class="col-lg-4">

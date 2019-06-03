@@ -112,6 +112,7 @@ body {
 	<div class="login-page">
 	  <div class="form">
     <div><img src="../imagenes/logo.png"></div>
+    
     <?php
     /* 
     <form class="register-form" method="post" action="index.php?page=checkin">
@@ -125,8 +126,8 @@ body {
 	      <p class="message">¿Ya estas registrado? <a href="#">Iniciar sesión</a></p>
       </form>
       */
-      ?>
-
+      ?> 
+      <div id="content"></div>
 	    <form class="login-form" method="post" action="index.php?page=checkin">
         <input type="hidden" name="login" value="login"/>
 	      <input type="text" name="user" placeholder="nombre de usuario o email"/>
@@ -147,6 +148,11 @@ body {
 	$('.message a').click(function(){
    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
 });
+  $('button').click(function(){
+    $('#content').html('<div><img src="../imagenes/loader.gif" alt="loading" /><br/>Un momento, por favor...</div>');
+   });
+
+
 </script>
 
 </body>

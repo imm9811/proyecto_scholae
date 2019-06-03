@@ -12,7 +12,7 @@ $(document).ready(function(){
 $saludo=$_GET['id'];
 
   $idAdmim=$_GET['id'];
-  $admin = Doctrine_Query::create()->from('Administradores')
+  $admin = Doctrine_Query::create()->from('Administrador')
   ->where("id = ?", $idAdmim)
   ->execute()
   ->getFirst();
@@ -32,8 +32,8 @@ $saludo=$_GET['id'];
         <label class="formulario__label">Apellidos</label>
         <input type="text"  name="apellido" value="<?php echo $admin->apellidos ?>" class="formulario__input">
 
-        <label class="formulario__label">Username</label>
-        <input type="text" name="username" value="<?php echo $admin->username ?>" class="formulario__input">
+        <label class="formulario__label">Alias</label>
+        <input type="text" name="alias" value="<?php echo $admin->alias ?>" class="formulario__input">
 
         <label class="formulario__label">Correo</label>
         <input type="email" name="correo" value="<?php echo $admin->correo ?>" class="formulario__input">

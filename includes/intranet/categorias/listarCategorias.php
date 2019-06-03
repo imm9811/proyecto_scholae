@@ -2,7 +2,7 @@
 #enviar{
   width: 160px;
   position: relative;
-  left: 85%; 
+  left: 440px; 
   bottom: 80px;
   height: 70px;
 }
@@ -21,7 +21,7 @@
       </thead>
       <tbody>
 
-        <?php $arrayCategorias = Doctrine_Query::create()->from('Categorias')
+        <?php $arrayCategorias = Doctrine_Query::create()->from('Categoria')
           ->execute();
           $longArray =count($arrayCategorias);
          
@@ -34,9 +34,9 @@
                           <tr>
                             <td>$categoria->id</td>
                             <td>$categoria->nombre</td>
-                            <td><a href='index.php?page=modCategoria&id=$categoria->id'><span class='glyphicon-edit'>&#x270f;</span></a></td>";
+                            <td><a href='index.php?page=mod&id=$categoria->id&pertenece=Categorias'><span class='glyphicon-edit'>&#x270f;</span></a></td>";
               ?>
-              <td><button class='glyphicon-remove' onclick="return delete_post(<?php echo $categoria->id ?>, 'Categorias')"><span>X</span></button></td>
+              <td><button class='glyphicon-remove' onclick="return delete_post(<?php echo $categoria->id ?>, 'Categoria')"><span>X</span></button></td>
               <?php "
                         </tr>
                         ";

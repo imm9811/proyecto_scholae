@@ -13,3 +13,14 @@ Cada vez que que haya un cambio de estrucutra en las tablas como un nuevo campo 
 hay que hacer un ?generarModelos, para que se apliquen los cambios si no petan
 ESTO SE DEBE PONER 
 http://localhost/proyecto_scholae/includes/intranet/index.php?generarModelos
+
+/*$arrayNoticias = Doctrine_Query::create()->from('Noticia')
+          ->execute();*/
+          /*$arrayNoticias = Doctrine_Query::create()->from('Noticia not, Multimedia mul, Categoria cat')
+                                                ->where('not.multimedia_id = mul.id')
+                                                ->andWhere('not.id = cat.noticia_id')
+                                                ->execute();
+                                                SELECT * FROM multimedia, noticia where multimedia.noticia_id = noticia.id
+         select noti.id, noti.titulo, noti.descripcion, mul.url from noticia as noti, multimedia as mul, categoria as cat where noti.id = mul.noticia_id and noti.id = cat.noticia_id
+         select noti.id, noti.titulo, noti.descripcion from noticia as noti, categoria as cat where noti.categoria_id = cat.id
+         SELECT url FROM `multimedia` where noticia_id = $id

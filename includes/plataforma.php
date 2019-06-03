@@ -7,25 +7,23 @@
 <div class=".d-none .d-lg-block .d-xl-none ml-5 especial"></div>
 <div id="plataformas" class="col-lg-8 col-md-9 col-sm-8  texto_principal">
   <div class="row">
-    <div class="col-lg-4 col-sm-6">
-      <a href="http://www.juntadeandalucia.es/educacion/portals/web/ced/pasen" target="_blank"><img id="foto" src="../imagenes/svgpasen.svg"></a>
-    </div>
-    <div class="col-lg-4 col-sm-6">
+  <div class="col-lg-4 col-sm-6">
       <a href="index.php?page=login" target="_blank"><img id="foto" src="../imagenes/logo.png"></a>
     </div>
-    <?php $arrayPlataforma = Doctrine_Query::create()->from('Plataformas')
+    
+    <?php $arrayPlataforma = Doctrine_Query::create()->from('Plataforma')
       ->execute();
     $longArray = count($arrayPlataforma);
-    if ($longArray != 0 || !empty($arrayPlataforma)) {
+    if ($longArray != 0 ) {
 
       foreach ($arrayPlataforma as $plataforma) {
         //echo "$administrador->nombre $administrador->id";
         echo "
             <div class='col-lg-4 col-sm-6'>
-            <a href='$plataforma->descripcion'
+            <a href='$plataforma->enlace'
              target='_blank'>
              
-             <img id='foto' src='../imagenes/$plataforma->foto'></a>
+             <img id='foto' alt='$plataforma->titulo' src='../imagenes/$plataforma->foto'></a>
              </div>      
                   ";
       }

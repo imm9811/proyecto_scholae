@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Plataformas</title>
+  <title>Pagina Inicial</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--ALL with the latest version possible-->
 

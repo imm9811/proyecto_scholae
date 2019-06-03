@@ -9,10 +9,9 @@ $(document).ready(function(){
 });
 </script>
 <?php
-$saludo=$_GET['id'];
 
   $idCate=$_GET['id'];
-  $cate = Doctrine_Query::create()->from('Categorias')
+  $cate = Doctrine_Query::create()->from('Categoria')
   ->where("id = ?", $idCate)
   ->execute()
   ->getFirst();
@@ -27,7 +26,7 @@ $saludo=$_GET['id'];
         <input type="hidden" name="apiMethod" value="setCategoria">
         <input type="hidden" name="id" value="<?php echo $cate->id ?>">
         <label class="formulario__label">Nombre</label>
-        <input type="text" name="usuario" value="<?php echo $cate->nombre ?>" class="formulario__input">
+        <input type="text" name="nombre" value="<?php echo $cate->nombre ?>" class="formulario__input">
 
         <button id="enviar" class="btn btn-primary"> Añadir </button>
     </form>

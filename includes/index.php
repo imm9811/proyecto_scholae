@@ -6,13 +6,15 @@ switch ($page) {
 		header("location: login-register.php");
 		break;
 	case 'home':
-		header("location: indice.html");
+		header("location: indice.php");
 		break;
 	case 'plataformas':
 		//header("location: ../plataformas.html");
 		include "plataforma.php";
 		include "include/site_footer.php";
 		break;
+	
+
 	case 'panel':
 		//header("location: ../plataformas.html");
 		include "../panel.html";
@@ -29,9 +31,10 @@ switch ($page) {
 			//echo "dentro del if";
 			$usuario = $_POST['user'];
 			$contrasena = $_POST['contraseña'];
-			
+			 
 			?>
 		<script> 
+
 			 $.ajax({
 				url: "lib/api.php",
 				method: "post",
@@ -40,7 +43,7 @@ switch ($page) {
 					console.log(data);
 					if(data['type']=='ok'){
 						console.log(data);
-						window.location.href = "intranet/index.php?page=Administradores";
+						window.location.href = "intranet/index.php?page=Noticias";
 					}
 					if(data['type']=='error'){
 						window.location.href = "index.php?page=login";	

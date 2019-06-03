@@ -27,7 +27,7 @@
   <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
   <script language="javascript" type="text/javascript" src="../../plugins/BUSCADOR/jquery.dynacloud-5.js"></script>
   <script src="site_footer.js"></script>
-
+  <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
 <?php   include('../lib/php/loadAll.php'); ?>
 
 </head>
@@ -45,7 +45,7 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.php?page=home">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Ajustes</a>

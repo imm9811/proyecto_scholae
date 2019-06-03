@@ -2,27 +2,27 @@
 <?php
 if(isset($_POST['id'])){
   $idAdmim=$_POST['id'];
-  $admin = Doctrine_Query::create()->from('Administradores')
+  $admin = Doctrine_Query::create()->from('Administrador')
   ->execute()
   ->getFirst();
 }
 ?>
-<h2>Añadir de Administradores</h2>
+<h2>Añadir Administradores</h2>
 <div class="table-responsive">
     <form role="form" action="../lib/api.php" class="formulario" method="post" enctype="multipart/form-data">
         
         <input type="hidden" name="apiMethod" value="setAdministradores">
         <label class="formulario__label">Nombre</label>
-        <input type="text" name="usuario" required value="<?php isset($admin->nombre) ?>" class="formulario__input">
+        <input type="text" name="usuario" required class="formulario__input">
 
         <label class="formulario__label">Apellidos</label>
-        <input type="text"  name="apellido" required value="<?php isset($admin->apellidos) ?>" class="formulario__input">
+        <input type="text"  name="apellido" required class="formulario__input">
 
-        <label class="formulario__label">Username</label>
-        <input type="text" name="username" required value="<?php isset($admin->username) ?>" class="formulario__input">
+        <label class="formulario__label">Alias</label>
+        <input type="text" name="alias" required class="formulario__input">
 
         <label class="formulario__label">Correo</label>
-        <input type="email" name="correo" required value="<?php isset($admin->correo) ?>" class="formulario__input">
+        <input type="email" name="correo" required class="formulario__input">
 
         <label class="formulario__label">Contraseña</label>
         <input type="password" required name="contrasena" class="formulario__input">

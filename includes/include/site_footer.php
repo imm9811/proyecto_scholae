@@ -12,9 +12,9 @@
     <div class="col-md-6 mt-md-0 mt-3">
 
       <!-- Content -->
-      <h5 class="text-uppercase">Footer Content</h5>
-      <p>Here you can use rows and columns here to organize your footer content.</p>
-
+      <h5 class="text-uppercase">I.E.S Francisco Romero Vargas</h5>
+      <p>Avda. Moreno Mendoza, s/n 11408 Jerez de la Frontera (Cádiz)</p>
+      <p>Tlfn: 956 70 99 17</p>
     </div>
     <!-- Grid column -->
 
@@ -87,5 +87,7 @@
 
 </footer>
 <!-- Footer -->
+<script src="../../assets/cool-share/plugin.js"></script>;
+<script src="../../assets/js/cool-share.js"></script>;
 </body>
 </html>

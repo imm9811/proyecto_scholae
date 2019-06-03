@@ -11,7 +11,7 @@ $(document).ready(function(){
 <?php
 
   $idPlataforma=$_GET['id'];
-  $plataforma = Doctrine_Query::create()->from('Plataformas')
+  $plataforma = Doctrine_Query::create()->from('Plataforma')
   ->where("id = ?", $idPlataforma)
   ->execute()
   ->getFirst();
@@ -25,15 +25,15 @@ $(document).ready(function(){
         
         <input type="hidden" name="apiMethod" value="setPlataformas">
         <input type="hidden" name="id" value="<?php echo $plataforma->id ?>">
-        <input type="hidden" name="apiMethod" value="setPlataformas">
+
         <label class="formulario__label">Nombre</label>
-        <input type="text" name="titulo" value="<?php echo $plataforma->titulo ?>" required  class="formulario__input">
+        <input type="text" name="titulo" value="<?php echo $plataforma->titulo ?>"  class="formulario__input">
 
         <label class="formulario__label">Foto*</label>
-        <input type="file" name="file" value="<?php echo $plataforma->foto ?>" required  class="formulario__input">
+        <input type="file" name="file" value="<?php echo $plataforma->foto ?>"  class="formulario__input">
         <label class="formulario__label">Enlace</label>
-        <input type="text" name="enlace" value="<?php echo $plataforma->id ?>" required class="formulario__input">
-        <p>*Por cuestiones de privacidad HTML no permite asignar valores a los campos tipo file, así que hay que seleccionar un archivo obligatoriamente</p>
+        <input type="text" name="enlace" value="<?php echo $plataforma->enlace ?>" class="formulario__input">
+        <p>*Por cuestiones de privacidad HTML no permite asignar valores a los campos tipo file, rellenar para cambiar</p>
         <button id="enviar" class="btn btn-primary"> Añadir </button>
     </form>
 </div>

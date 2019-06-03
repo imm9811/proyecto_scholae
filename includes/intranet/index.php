@@ -4,7 +4,7 @@ $page=$_GET["page"];
 	switch($page){
 
 		case 'home':
-      header("location: indice.html");
+      		header("location: ../../indice.php");
 		break;
 		case 'Noticias':
 		include 'noticias/ctlNoticias.php';
@@ -12,7 +12,7 @@ $page=$_GET["page"];
 	break;
 
 	case 'Noticias_lateral':
-		include 'noticias/ctlNoticias_lateral.php';
+		include 'noticias_lateral/ctlPp_aside.php';
 			//include 'panel.html';
 		break;
 		case 'Plataformas':
@@ -20,7 +20,6 @@ $page=$_GET["page"];
 			//include 'panel.html';
 		break;
 	
-		
 		case 'Categorias':
 			include 'categorias/ctlCategorias.php';
 			//include 'panel.html';
@@ -31,7 +30,7 @@ $page=$_GET["page"];
 		break;
 		
 
-		case 'modAdmin':
+		/*case 'fg':
 			$id=$_GET['id'];
 			include 'administradores/ctlAdministradores.php';
 			include "administradores/editAdministradores.php";
@@ -41,6 +40,13 @@ $page=$_GET["page"];
 			$id=$_GET['id'];
 			include 'plataformas/ctlPlataformas.php';
 			include "plataformas/editPlataformas.php";
+		break;*/
+		case 'mod':
+			$id=$_GET['id'];
+			$pertenece=$_GET['pertenece'];
+			$min=strtolower($pertenece);
+			include "$min/ctl$pertenece.php";
+			include "$min/edit$pertenece.php";
 		break;
 }
 ?>

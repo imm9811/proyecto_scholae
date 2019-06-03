@@ -2,7 +2,7 @@
 #enviar{
   width: 160px;
   position: relative;
-  left: 85%; 
+  left: 68%; 
   bottom: 350px;
   height: 70px;
 }
@@ -24,7 +24,7 @@
       </thead>
       <tbody>
 
-        <?php $arrayAdministradores = Doctrine_Query::create()->from('Administradores')
+        <?php $arrayAdministradores = Doctrine_Query::create()->from('Administrador')
           ->execute();
           $longArray =count($arrayAdministradores);
           if ($longArray!=0) {
@@ -37,11 +37,11 @@
                           <td>$administrador->id</td>
                           <td>$administrador->nombre</td>
                           <td>$administrador->apellidos</td>
-                          <td>$administrador->username</td>
+                          <td>$administrador->alias</td>
                           <td>$administrador->correo</td>
-                          <td><a href='index.php?page=modAdmin&id=$administrador->id'><span class='glyphicon-edit'>&#x270f;</span></a></td>";
+                          <td><a href='index.php?page=mod&id=$administrador->id&pertenece=Administradores'><span class='glyphicon-edit'>&#x270f;</span></a></td>";
             ?>
-            <td><button class='glyphicon-remove' onclick="return delete_post(<?php echo $administrador->id ?>, 'Administradores')"><span>X</span></button></td>
+            <td><button class='glyphicon-remove' onclick="return delete_post(<?php echo $administrador->id ?>, 'Administrador')"><span>X</span></button></td>
             <?php "
                       </tr>
                       ";

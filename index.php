@@ -1,3 +1,3 @@
 <?php
-  header("location: includes/indice.html");
+  header("location: includes/indice.php");
 ?>
