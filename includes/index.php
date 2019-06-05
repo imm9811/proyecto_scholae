@@ -1,31 +1,42 @@
 <?php
-include "plantilla.php";
+
 $page = $_GET["page"];
 switch ($page) {
 	case 'login':
 		header("location: login-register.php");
 		break;
 	case 'home':
-		header("location: indice.php");
-		break;
+		
+		include "indice.php";
+	break;
 	case 'plataformas':
+		include "plantilla.php";
 		//header("location: ../plataformas.html");
 		include "plataforma.php";
 		include "include/site_footer.php";
 		break;
-	
 
 	case 'panel':
+	include "plantilla.php";
 		//header("location: ../plataformas.html");
 		include "../panel.html";
 		break;
 
 	case 'contacto':
+	include "plantilla.php";
 		include 'contacto.php';
 		include "include/site_footer.php";
 		break;
-
-	case 'checkin':
+	
+	case 'Noticia':
+		$pertenece=$_GET['pertenece'];
+		include "plantilla.php";
+		include "mostrarNoticia.php";	
+		include "include/site_footer.php";
+	break;
+	
+			case 'checkin':
+	include "plantilla.php";
 		//echo "entro";
 		if (isset($_POST['user']) and isset($_POST['contraseña'])  ) {
 			//echo "dentro del if";

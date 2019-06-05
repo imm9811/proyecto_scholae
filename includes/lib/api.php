@@ -105,7 +105,8 @@ if (isset($apiMethod)) {
         break;
       }
     case 'setCategoria': {
-        $categoria = $_POST['nombre'];
+        $nom_original = $_POST['nombre'];
+        $categoria= ucwords(strtolower($nom_original));
         $id = $_POST['id'];
         if (isset($_POST['id'])) {
           $categorias = Doctrine_Query::create()->from('Categoria')

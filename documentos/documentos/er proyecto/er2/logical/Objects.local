@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<oracle.dbtools.crest.model.design.logical.LogicalDesign>
-   <object objectType="Entity" objectID="D0A826E6-2D9F-184C-F175-786F43F42460" name="administradores" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="EB1A0A69-7128-8AA0-F27F-32DBE47A8F33" propertySourceId="" propertyTargetId=""/>
-   <object objectType="Entity" objectID="510364E9-C10F-EB8F-50DA-53B0A18654A4" name="panel principal" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="EB1A0A69-7128-8AA0-F27F-32DBE47A8F33" propertySourceId="" propertyTargetId=""/>
-   <object objectType="Entity" objectID="3EFE6311-2D4A-3205-BD63-66CFA0F70E05" name="pantallas" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="EB1A0A69-7128-8AA0-F27F-32DBE47A8F33" propertySourceId="" propertyTargetId=""/>
-   <object objectType="Entity" objectID="845916B5-0ABF-36A6-56ED-A7556499CE5F" name="plataforma" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="EB1A0A69-7128-8AA0-F27F-32DBE47A8F33" propertySourceId="" propertyTargetId=""/>
-   <object objectType="Entity" objectID="50454083-7327-F4CB-B47C-3732A0BB86D4" name="slider_noticia" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="EB1A0A69-7128-8AA0-F27F-32DBE47A8F33" propertySourceId="" propertyTargetId=""/>
-</oracle.dbtools.crest.model.design.logical.LogicalDesign>

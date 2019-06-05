@@ -87,7 +87,7 @@
 
 </footer>
 <!-- Footer -->
-<script src="../../assets/cool-share/plugin.js"></script>;
-<script src="../../assets/js/cool-share.js"></script>;
+<script src="../plugins/cool-share/plugin.js"></script>
+<!--<script src="../../assets/js/cool-share.js"></script>; -->
 </body>
 </html>
