@@ -16,11 +16,16 @@
 							foreach ($arrayNoticias as $noticia) {
 
 								echo "
-                        	<div class='noticia'>
-                          <h2>$noticia->titulo </h2>
-						  <div>
-						  <p class='socialShare'>$noticia->descripcion</p>
-						  
+							<div class='col-lg-12 noticia'>
+								<div class='col-lg-11'>
+								  <h2>$noticia->titulo </h2>
+								</div>
+								<div class='col-lg-1 socialShare' >
+								 
+								</div>
+								<div class='col-lg-12'>
+								<p class='cuerpo'>$noticia->descripcion</p>
+								
                           ";
 								$arrayArchivos = Doctrine_Query::create()
 									->from('Multimedia')
@@ -49,7 +54,7 @@
 											
 										}
 										if($esArchivo == false && $archivo !=null){
-											echo "<div class='video'><iframe width='560' height='315' src='https://www.youtube.com/embed/yda62tNSLsQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>";;
+											echo "<div class='video'><iframe src='https://www.youtube.com/embed/yda62tNSLsQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>";;
 										}
 
 									}

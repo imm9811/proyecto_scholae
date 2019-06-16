@@ -103,7 +103,7 @@
 			<header class="header">
 				<nav>
 					<ul>
-						<li><a href="index.php?page=home">Home</a></li>
+						<li><a href="index.php?page=home">Inicio</a></li>
 						<li><a href="index.php?page=plataformas">Plataformas</a></li>
 
 					</ul>
@@ -124,9 +124,7 @@
 						<a class="nav-link active" href="#">Overview <span class="sr-only">(current)</span></a>
 					</li>
 
-					<li class="nav-item">
-						<a class="nav-link" href="index.php?page=contacto">Contacta</a>
-					</li>
+					
 				</ul>
 
 				<ul class="nav nav-pills flex-column">
@@ -139,7 +137,7 @@
 
 							foreach ($arrayCategorias as $categoria) {
 								//echo "$administrador->nombre $administrador->id";
-								if ($categoria->nombre != 'Principal') {
+								if ($categoria->nombre != 'Principal' &&  $categoria->nombre != 'Lateral') {
 									echo "
 			  		<li><a href='index.php?page=Noticia&pertenece=$categoria->id'>$categoria->nombre</a></li>        
                 ";
@@ -150,7 +148,9 @@
 						}
 						?>
 					</li>
-
+					<li class="nav-item">
+						<a class="nav-link" href="index.php?page=contacto">Contacta</a>
+					</li>
 
 				</ul>
 			</nav>

@@ -1,145 +1,185 @@
 <style>
-  #enviar {
+  #enviar, #borrar{
     width: 160px;
     position: relative;
-    left: 70%;
-    bottom: 600px;
+    left: 63%;
+    
     height: 70px;
+  }
+  #enviar{
+    bottom: 357px;
+  }
+  #borrar{
+    bottom: 370px;
   }
 </style>
 <h2>Listado de Noticias</h2>
-<div class="table-responsive">
-  <form role="form" action="" method="post" enctype="multipart/form-data">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>#ID</th>
-          <th>Titulo</th>
-          <th>Descripcion</th>
-          <th>Fotos</th>
-          <th>Archivos</th>
-          <th>Categoría</th>
-          <th>Modificar</th>
-          <th>Eliminar</th>
-        </tr>
-      </thead>
-      <tbody>
 
-        <?php
-        $arrayFormatosImagenes= ["jpeg","jpg","png","gif","tiff","raw","bmw","svg"];
-        
-        /*$arrayNoticias = Doctrine_Query::create()->from('Noticia')
-          ->execute();*/
-        /*$arrayNoticias = Doctrine_Query::create()->from('Noticia not, Multimedia mul, Categoria cat')
-                                                ->where('not.multimedia_id = mul.id')
-                                                ->andWhere('not.id = cat.noticia_id')
-                                                ->execute();
-                                                SELECT * FROM multimedia, noticia where multimedia.noticia_id = noticia.id
-         select noti.id, noti.titulo, noti.descripcion, mul.url from noticia as noti, multimedia as mul, categoria as cat where noti.id = mul.noticia_id and noti.id = cat.noticia_id
-         select noti.titulo, noti.descripcion from noticia as noti, categoria as cat where noti.id = cat.noticia_id
-         SELECT url FROM `multimedia` where noticia_id = $id
+<div class="container">
 
-          $consultaNoticias=consultade arriba
-          while(consultaNoticias->fetch(PDO::FETCH_ASSOC)){
+  <?php
 
-            $id= $fetch['id'];
-            $titulo= $fetch['titulo'];
-            $descripcion= $fetch['descripcion'];
-  $mysqli = new mysqli("127.0.0.1", "root", "", "scholae");
-          $mysqli->query("select not.titulo")
-
-          }
-select noti.titulo, noti.descripcion from noticia as noti, categoria as cat where noti.id = cat.noticia_id
-          */
-        $arrayNoticias = Doctrine_Query::create()->select("noti.id, noti.titulo, noti.descripcion")
-          ->from('Noticia noti, Categoria cat')
-          ->where('noti.categoria_id = cat.id')
-          ->execute();
+  $arrayNoticias = Doctrine_Query::create()->select("noti.id, noti.titulo, noti.descripcion")
+    ->from('Noticia noti, Categoria cat')
+    ->where('noti.categoria_id = cat.id')
+    ->execute();
 
 
-        $longArray = count($arrayNoticias);
-        
-        if ($longArray != 0) {
-          foreach ($arrayNoticias as $noticia) {
-           
-           
+  $longArray = count($arrayNoticias);
+
+  if ($longArray != 0) {
+    foreach ($arrayNoticias as $noticia) {
+      
+    $nombreCategoria = Doctrine_Query::create()
+    ->select('nombre')
+    ->from('Categoria')
+    ->where("id = $noticia->categoria_id")
+    ->execute()
+    ->getFirst();
+
+      echo "
+          <div class='row' style='margin-bottom: 10%; '>
+          <div class='col-lg-10 border border-warning'>
+                <div>
+                    <b><u>ID</u></b>
+                  </div>
+                  <div >
+                    $noticia->id
+                  </div>
+                  <div>
+                    <b><u>Titulo</u></b>
+                  </div>
+                  <div >
+                  $noticia->titulo
+                  </div>
+                    <div>
+                    <b><u>Descripción</u></b>
+                  </div>
+                  <div >
+                  $noticia->descripcion
+                  </div>
+                  <div>
+                    <b><u>Categoría</u></b>
+                  </div>
+                  <div>
+                    $nombreCategoria->nombre
+                  </div>
+                 ";
+
+
+      $arrayArchivos = Doctrine_Query::create()
+        ->from('Multimedia')
+        ->where("noticia_id = $noticia->id")
+        ->execute();
+
+      
+
+      if (!empty($arrayArchivos)) {
+        if(count($arrayArchivos) > 0)
+        {
             echo "
-                        <tr>
-                          <td>$noticia->id</td>
-                          <td>$noticia->titulo</td>
-                          <td>$noticia->descripcion</td>
-                          ";
-                       
-                        
-
-            if (isset($noticia->multimedia_id)) {
-              echo "<td>";
-              $arrayArchivos = Doctrine_Query::create()
-                ->from('Multimedia')
-                ->where("noticia_id = $noticia->id")
-                ->execute();
-                
-                foreach($arrayArchivos as $archivos){
-                 
-                  if(!is_null($archivos->url)){
-                    $archivo = explode(".",$archivos->url);
-                    $ubicacion="../../assets/images/$archivos->url";
-                    //$formato=array_search($archivo,$arrayFormatosImagenes)==true;
-                    foreach($arrayFormatosImagenes as $formatos){
-                      if(!$archivo){
-                        if($archivo == $formatos){
-                           echo " <img src='$ubicacion'> ";
-                        }else{
-                          echo "<a href='$ubicacion' download>$archivos->url</a>";
-                        }
-                       
-                      }else{
-                        echo "aqui van los videos";
-                      }
-                    }
-                   
-                    
-                  }
-                  /*AQUI TENGO QUE DECLARAR UNA VARIABLE MAS PARA PODER INTRODUCIR VIDEOS
-                  if(strpos($archivo,'youtube')){
-                    echo $archivos->url."<iframe width='560' height='315' src='$archivos->url' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
-                  }
-                  */
-                 
-                } 
-                echo "</td>";
-             }else{
-              echo "<td colspan='2'>sin multimedia</td>";
-            }
-            $nombreCategoria = Doctrine_Query::create()
-            ->select('nombre')
-            ->from('Categoria')
-            ->where("id = $noticia->categoria_id")
-            ->execute()
-            ->getFirst();
-               echo "
-                          <td></td>
-                          <td>$nombreCategoria->nombre</td>
-                          <td><a href='index.php?page=mod&id=$noticia->id&pertenece=Noticias'><span class='glyphicon-edit'>&#x270f;</span></a></td>";
-            ?>
-        <td><button class='glyphicon-remove' onclick="return delete_post(<?php echo $noticia->id ?>, 'Noticias')"><span>X</span></button></td>
-        <?php "
-                      </tr>
-                      ";
-          }
-        }else{
-          echo "<tr>
-          <td colspan='8'>no hay valores</td>
-          </tr>";
+          <div>
+          <b><u>Foto</u></b>
+          </div>";
         }
+        //bucle para mostrar todas las fotos
+        foreach ($arrayArchivos as $archivos) {
+          if($archivos->eliminado==0){ 
+          $esArchivo = strpos($archivos->url, ".");
 
-        ?>
-      </tbody>
-    </table>
-  </form>
-  <br />
-  <br />
-  <br />
-  <br />
+          $ubicacion = "../../assets/images/$archivos->url";
+          $archivo = $archivos->url;
+
+            if ($esArchivo == true) {
+
+              foreach ($arrayFormatosImagenes as $formato) {
+
+                if (strpos($archivo, $formato)) {
+                  echo " 
+                
+                    <div>
+                    <img width='25%' src='$ubicacion'> 
+                    </div>
+                ";
+                } 
+              }
+            }
+          } 
+        }
+          echo "
+          <div>
+          <b><u>Video</u></b>
+          </div>";
+
+          foreach ($arrayArchivos as $archivos) {
+
+              $esArchivo = strpos($archivos->url, ".");
+
+              $ubicacion = "../../../assets/images/$archivos->url";
+              $archivo = $archivos->url;            
+
+                //condicion para saber si esta metiendo un video
+                if ($esArchivo == false && $archivo != null) {
+                  echo " 
+                    <div>
+                    $archivos->url
+                    </div>
+                ";
+                }
+              
+            
+          }
+          echo "
+          <div>
+          <b><u>Descargable</u></b>
+          </div>";
+
+          foreach ($arrayArchivos as $archivos) {
+            if($archivos->eliminado==0){ 
+              $esArchivo = strpos($archivos->url, ".");
+
+              $ubicacion = "../../../assets/images/$archivos->url";
+              $archivo = $archivos->url;
+
+              foreach ($arrayFormatosTextos as $formato) {
+                if (strpos($archivo, $formato)) {
+                  echo " 
+                  
+                      <div>
+                      <a href='$ubicacion' download>$archivos->url</a>
+                      </div>
+                  ";
+                }
+              }
+            }
+          }
+      } else {
+        echo "no hay contenido multimedia";
+      }
+
+      echo "
+              </div>
+
+          <div class='col-lg-2 ' style='text-align:center'>
+            <div class='col-lg-12  border border-info' style='margin-bottom:60%'><div><a href='index.php?page=mod&id=$noticia->id&pertenece=Noticias'>Modificar<span class='glyphicon-edit'>&#x270f;</span></a></div></div>
+            ";
+      ?>
+      <div class='col-lg-12  border border-danger'>Eliminar
+        <div>
+          <button class='glyphicon-remove' onclick="return delete_post('<?php echo $noticia->id ?>', 'Noticia')"><span>X</span></button>
+        </div>
+      </div>
+      <?php
+      echo "
+          </div>
+        </div>
+          ";
+    }
+  } else {
+    echo "no hay Noticia";
+  }
+  ?>
+
 </div>
+
 <?php include '../site_footer.php';   ?>

@@ -221,81 +221,12 @@ if (isset($apiMethod)) {
         break;
       }
 
-    case 'setPp_aside': {
-        if (isset($_FILES['foto'])) {
-
-          $name_file = $_FILES['foto']['name'];
-          $tmp_name = $_FILES['foto']['tmp_name'];
-          $local_image = "../../assets/images/";
-          move_uploaded_file($tmp_name, $local_image . $name_file);
-        } else {
-          echo "no se encontro imagen alguna";
-        }
-        if (isset($_FILES['archivos'])) {
-          $total_files = count($_FILES['archivos']['name']);
-          for ($key = 0; $key < $total_files; $key++) {
-
-            $name_archivos = $_FILES['archivos']['name'];
-            $tmp_name = $_FILES['archivos']['tmp_name'];
-            $local_image = "../../assets/images/";
-            move_uploaded_file($tmp_name, $local_image . $name_archivos);
-          }
-        } else {
-          echo "no se encontro archivo alguno";
-        }
-        if (isset($_POST['id'])) {
-
-          $noticia_lateral = Doctrine_Query::create()->from('Pp_aside')
-            ->where('id = ?', $_POST['id'])
-            ->execute()
-            ->getFirst();
-          //si devuelve hace el update
-          if (isset($noticia_lateral->id)) {
-
-            $noticia_lateral->titulo = $_POST['titulo'];
-            $noticia_lateral->descripcion = $_POST['descripcion'];
-            $noticia_lateral->foto = $name_file;
-            if (isset($_FILES['archivos'])) {
-              $total_files = count($_FILES['archivos']['name']);
-              for ($key = 0; $key < $total_files; $key++) {
-
-                $name_archivos = $_FILES['archivos']['name'];
-                $noticia_lateral->descripcion =  $name_archivos;
-              }
-            }
-          }
-        } else {
-          echo "entro en insert";
-          $noticia_lateral = new Pp_aside();
-          $noticia_lateral->titulo = $_POST['titulo'];
-          $noticia_lateral->descripcion = $_POST['descripcion'];
-          $noticia_lateral->foto = $name_file;
-
-          $noticia_lateral->archivos = $name_archivos;
-        }
-
-        try {
-          move_uploaded_file($tmp_name, $local_image . $name_file);
-          $noticia_lateral->save();
-          header('Content-type: application/json');
-          echo json_encode(['type' => 'ok', 'data' => 'nueva noticia lateral subida']);
-
-          header('location:  ../intranet/index.php?page=Noticias_lateral');
-        } catch (Exception $e) {
-          header('Content-type: application/json');
-          echo json_encode(['type' => 'error', 'data' => 'fallo al subir']);
-        }
-        break;
-      }
-
-
-
     case 'setNoticias': {
         $titulo = $_POST['titulo'];
-        $descripcion = $_POST['descripcion'];
         $categoria_id = $_POST['categorias'];
+        $video=$_POST['video'];
         $arrayArchivos = [];
-
+        
         if (isset($_FILES["archivo"]['name'])) {
           foreach ($_FILES["archivo"]['name'] as $key => $tmp_name) {
             
@@ -326,48 +257,122 @@ if (isset($apiMethod)) {
               closedir($dir); //Cerramos el directorio de destino
             }
           }
-        } else {
-          $multimedia = new Multimedia();
-          $multimedia->save();
         }
 
-        //si no pues hace un insert;
-        $noticia = new Noticia();
-        $noticia->titulo = $titulo;
-        $noticia->descripcion = $descripcion;
-        $noticia->categoria_id = $categoria_id;
+        //ACTUALIZAR / UPDATE
+        if(isset($_POST['id'])){
+          $descripcion = $_POST['descripcion1'];
+          //si no pues hace un insert;
+         $noticia = Doctrine_Query::create()->from('Noticia')
+            ->where('id = ?', $_POST['id'])
+            ->execute()
+            ->getFirst();
 
-        $noticia->save();
+          $noticia->titulo = $titulo;
+          $noticia->descripcion = $descripcion;
+          $noticia->categoria_id = $categoria_id;
 
-         foreach($arrayArchivos as $archivo){
-          $multimedia= new Multimedia();
-          $multimedia->url=$archivo;
-          $multimedia->noticia_id=$noticia->id;
-          $multimedia->save();
-         }
-      
-         
-        $noticia = Doctrine_Query::create()
-        ->from('Noticia')
-        ->where('titulo = ?', $_POST['titulo'])
-        ->execute()
-        ->getFirst();
+          $noticia->save();
+          //si contiene valores hace los cambios (borrar y luego introduce)
+          if(sizeof($arrayArchivos) != 0){
+              $q = Doctrine_Query::create()
+              ->delete('Multimedia')
+              ->where("noticia_id = ?", $id)
+              ->execute();
+            foreach($arrayArchivos as $archivo){
+              $multimedia= new Multimedia();
+              $multimedia->url=$archivo;
+              $multimedia->noticia_id=$noticia->id;
+              $multimedia->save();
+            }
+          }
 
-        $noticia->multimedia_id=$noticia->id;
-        $noticia->save();
+          if(isset($video)){
+             $multimedia = Doctrine_Query::create()->from('Multimedia')
+              ->where('id = ?',  $_POST['id_video'])
+              ->execute()
+              ->getFirst();
+             if(isset($multimedia->id)){
+             
+              $multimedia->url=$video;
+              $multimedia->noticia_id=$_POST['id'];
+              $multimedia->save();
+             }else{
+              $multimedia= new Multimedia();
+              $multimedia->url=$video;
+              $multimedia->noticia_id=$_POST['id'];
+              $multimedia->save();
+             }
+             
+           } 
+           
+          if(isset($_POST['arrayFotos'])){
+            
+            $cadena=$_POST['arrayFotos'];
+            
+            $array = explode(",", $cadena);
+            
+            foreach($array as $valor){
+              
+              $multimedia = Doctrine_Query::create()->from('Multimedia')
+              ->where('id = ?',  $valor)
+              ->execute()
+              ->getFirst();
+              $multimedia->eliminado=1;
+              $multimedia->save();
+            }
+          }
 
+          $noticia = Doctrine_Query::create()
+          ->from('Noticia')
+          ->where('titulo = ?', $_POST['titulo'])
+          ->execute()
+          ->getFirst();
+
+          $noticia->multimedia_id=$noticia->id;
+          $noticia->save();
+           
+        }
+        // INSERTAR / INSERT
+        
+        else{
+          $descripcion = $_POST['descripcion'];
+          //si no pues hace un insert;
+          $noticia = new Noticia();
+          $noticia->titulo = $titulo;
+          $noticia->descripcion = $descripcion;
+          $noticia->categoria_id = $categoria_id;
+
+          $noticia->save();
+          if(!empty($arrayArchivos)){
+            foreach($arrayArchivos as $archivo){
+              $multimedia= new Multimedia();
+              $multimedia->url=$archivo;
+              $multimedia->noticia_id=$noticia->id;
+              $multimedia->save();
+            }
+          }
+
+          if(isset($video)){
+            $multimedia= new Multimedia();
+            $multimedia->url=$video;
+            $multimedia->noticia_id=$noticia->id;
+            $multimedia->save();
+          } 
           
+          $noticia = Doctrine_Query::create()
+          ->from('Noticia')
+          ->where('titulo = ?', $_POST['titulo'])
+          ->execute()
+          ->getFirst();
+
+          $noticia->multimedia_id=$noticia->id;
+          $noticia->save();
+        }
+         
         header('location:  ../intranet/index.php?page=Noticias');
         break;
       }
-
-
-
-
-
-
-
-
 
     case 'delete': {
         $categorias = $_POST["categoria"];
@@ -378,21 +383,20 @@ if (isset($apiMethod)) {
           ->where("id = ?", $id)
           ->execute()
           ->getFirst();
+
         if($categorias=='Noticia'){
+          
           $q = Doctrine_Query::create()
           ->delete('Multimedia')
           ->where("noticia_id = ?", $id)
           ->execute();
         }
-        
-          /*¿no funca?*/
+
 
         header('Content-type: application/json');
-        header("location:  ../intranet/index.php?page=" . $categorias);
+        header('location:  ../intranet/index.php?page=$categorias');
         break;
       }
-
-
 
       /*---------------------------------------------------------------------*/
   } //fin switch

@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejercicio formulario</title>
+</head>
+
+<body>
+<h1> Formulario de pedido </h1>
+<form action="respuesta-formulario1.php" method="post">
+<table border=0>
+<tr bgcolor=#cccccc">
+<td width=150> Producto </td>
+<td width=15> Cantidad </td>
+</tr>
+<tr>
+<td> Ruedas </td>
+<td align="center">
+<input type="text" name="cant_ruedas" size="3"
+maxlength="3"></td>
+</tr>		
+<tr>
+<td> Aceite </td>
+<td align="center"> <input type="text" name="cant_aceite" size="3"
+maxlength="3"></td>
+</tr>
+<tr>
+<td> Anticongelante </td>
+<td align="center"> <input type="text" name="cant_anticongelante"
+size="3" maxlength="3"></td>
+</tr>				
+<tr>
+<td> ¿Cómo ha encontrado la tienda? </td>
+<td> 
+<select name="encontrado">
+<option value="a"> Cliente habitual </option>
+<option value="b"> Anuncio de TV </option>
+<option value="c"> Guía telefónica </option>
+<option value="d"> Boca a boca </option>
+</select>	 
+</td>
+</tr>				
+
+<tr>
+<td colspan="2" align="center">
+ <input type="submit" value=
+"Enviar orden"></td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>

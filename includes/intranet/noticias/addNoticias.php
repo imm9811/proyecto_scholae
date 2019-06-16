@@ -16,6 +16,9 @@
         <label class="formulario__label">Imágenes y Archivos (Múltiples)</label>
         <input type="file" name="archivo[]" multiple class="formulario_input">
         <br>
+        <label class="formulario__label">Video (Solo uno)  </label>
+        <input type="text" name="video" multiple class="formulario_input">
+        <br>
         <br>
         <br>
         <label class="formulario__label">Categorias donde se mostrará</label>

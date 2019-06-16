@@ -34,8 +34,9 @@ $(document).ready(function(){
         <label class="formulario__label">Enlace</label>
         <input type="text" name="enlace" value="<?php echo $plataforma->enlace ?>" class="formulario__input">
         <p>*Por cuestiones de privacidad HTML no permite asignar valores a los campos tipo file, rellenar para cambiar</p>
-        <button id="enviar" class="btn btn-primary"> Añadir </button>
+        <button id="enviar" class="btn btn-primary"> Editar </button>
     </form>
+  
 </div>
 </div>
 

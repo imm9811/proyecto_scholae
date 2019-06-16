@@ -9,6 +9,7 @@ Doctrine_Manager::getInstance()->bindComponent('Multimedia', 'doctrine');
  * 
  * @property integer $id
  * @property string $url
+ * @property integer $eliminado
  * @property integer $noticia_id
  * 
  * @package    ##PACKAGE##
@@ -35,6 +36,15 @@ abstract class BaseMultimedia extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('eliminado', 'integer', 1, array(
+             'type' => 'integer',
+             'length' => 1,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
              'autoincrement' => false,
              ));
         $this->hasColumn('noticia_id', 'integer', 4, array(

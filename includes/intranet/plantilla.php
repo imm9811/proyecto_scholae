@@ -70,9 +70,6 @@
             <a class="nav-link active" href="index.php?page=Noticias">Noticias <span class="sr-only">Noticias</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?page=Noticias_lateral">Noticias Lateral</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="index.php?page=Plataformas">Plataformas</a>
           </li>
           <li class="nav-item">
@@ -98,4 +95,7 @@
         </ul>
       </nav>
 
-      
+<?php
+  $arrayFormatosImagenes = ["jpeg", "jpg", "png", "gif", "tiff", "raw", "bmw", "svg"];
+	$arrayFormatosTextos= ["pdf","txt","doc","html","docx","zip","rar","xlsx"];
+?>

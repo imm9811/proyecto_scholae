@@ -111,6 +111,96 @@ include "plantilla.php";
 							->from('Noticia noti, Categoria cat')
 							->where('noti.categoria_id = cat.id')
 							->andWhere('cat.id=1 ')
+							->orderBy('noti.id DESC')
+							->execute();
+
+						$longArray = count($arrayNoticias);
+						// print_r($arrayNoticias);debug();die();echo $noticia->id;echo $noticia->descripcion;
+						if ($longArray != 0) {
+							foreach ($arrayNoticias as $noticia) {
+
+						echo "
+                        	<div class='noticia'>
+                          <h2>$noticia->titulo </h2> <p class='socialShare'></p>
+						  <div>
+						  <p>$noticia->descripcion</p>
+						  
+                          ";
+								$arrayArchivos = Doctrine_Query::create()
+									->from('Multimedia')
+									->where("noticia_id = $noticia->id")
+									->execute();
+								if (!empty($arrayArchivos)) 
+								{
+									foreach ($arrayArchivos as $archivo) 
+									{
+										if($archivo->eliminado==0){ 
+											$aArchivo = explode(".", $archivo->url);
+
+											$ubicacion = "../assets/images/$archivo->url";
+											if(isset($aArchivo[count($aArchivo)-1]) && count($aArchivo) > 1)
+											{
+												$codigoExtension = 0;
+												$check = false;
+												for($i = 0;$i < count($arrayFormatosImagenes) && 
+												$check == false;$i++)
+												{
+													if($arrayFormatosImagenes[$i] == $aArchivo[count($aArchivo)-1])
+													{
+														$codigoExtension = 0;
+														$check = true; 
+													}
+												}
+
+												for($j = 0;$j < count($arrayFormatosTextos) && 
+												$check == false;$j++)
+												{
+													if($arrayFormatosTextos[$j] == $aArchivo[count($aArchivo)-1])
+													{
+														$codigoExtension = 1;
+														$check = true; 
+													}
+												}
+
+												switch($codigoExtension)
+												{
+													case 0:
+													echo " <p><img width='300px' src='$ubicacion'> </p>";
+													break;
+
+													case 1:
+													echo "<p> <a href='$ubicacion' download>$archivos->url</a></p>";
+													break;
+												}
+											}
+											else{
+												echo "<div class='video'><iframe src='https://www.youtube.com/embed/$archivo->url' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>";
+										
+											}
+										}
+									}
+									
+								} else {
+									echo " ";
+								}
+							
+								echo "</div></div>";
+							} //fin del primer bucle
+						} //fin iflongArray
+						?>
+
+					</div>
+
+				</div>
+			</div>
+		
+			<!--ASIDE-->
+			<div class="col-lg-2 col-sm-12 col-xs-12 aside">
+			<?php
+						$arrayNoticias = Doctrine_Query::create()->select("noti.id, noti.titulo, noti.descripcion")
+							->from('Noticia noti, Categoria cat')
+							->where('noti.categoria_id = cat.id')
+							->andWhere('cat.id=2 ')
 							->execute();
 
 						$longArray = count($arrayNoticias);
@@ -120,9 +210,9 @@ include "plantilla.php";
 
 								echo "
                         	<div class='noticia'>
-                          <h2>$noticia->titulo </h2>
+                          <h2 id='$noticia->id'>$noticia->titulo </h2> 
 						  <div>
-						  <p class='socialShare'>$noticia->descripcion</p>
+						  <p>$noticia->descripcion</p>
 						  
                           ";
 								$arrayArchivos = Doctrine_Query::create()
@@ -145,14 +235,14 @@ include "plantilla.php";
 											}
 											foreach ($arrayFormatosTextos as $formato) {
 												if (strpos($archivo,$formato)) {
-													echo "<p>aqui van los archivo descargables <a href='$ubicacion' download>$archivos->url</a></p>";
+													echo "<p> <a href='$ubicacion' download>$archivos->url</a></p>";
 												}
 												
 											}
 											
 										}
 										if($esArchivo == false && $archivo !=null){
-											echo "<div class='video'><iframe width='560' height='315' src='https://www.youtube.com/embed/yda62tNSLsQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>";;
+											echo "<div class='video'><iframe src='https://www.youtube.com/embed/yda62tNSLsQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>";;
 										}
 
 									}
@@ -172,15 +262,6 @@ include "plantilla.php";
 						} //fin iflongArray
 						?>
 
-					</div>
-
-				</div>
-			</div>
-			<!--ASIDE-->
-			<div class="col-lg-2 col-sm-12 col-xs-12 aside">
-				aqui con los row se generaran las los aside asdasdasdasqui con los row se generaran las los
-				aside
-				asdasdasdas
 			</div>
 		</div>
 	</div>

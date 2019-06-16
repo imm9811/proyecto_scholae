@@ -75,6 +75,9 @@ body {
   .mostrar{
     display: block;
   }
+  a{
+    color:#007bff !important;
+  }
   .ocultar{
     display: none;
   }
@@ -87,8 +90,16 @@ body {
     font-size:140%
   }
   .glyphicon-remove{
+    background-color: transparent;
+    border: none;
     color: red;
-    text-decoration: none !important;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
   }
   .glyphicon-remove:hover{
     text-decoration: none !important;
@@ -96,6 +107,8 @@ body {
   }
   .glyphicon-edit{
     position: relative;
+    padding: 15px px;
+    margin: 4px 20px;
   top: 1px;
   display: inline-block;
   font-family: 'Glyphicons Halflings';
@@ -119,7 +132,7 @@ transform: rotate(110deg);
 }
 
 form td button{
-  padding: 0;
+padding: 0;
 border: none;
 background: none;
 }
@@ -175,7 +188,14 @@ th, td {
   }
 }
 
-
+.boton_falso div{
+  cursor: pointer;
+  background-color: red;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: white;
+  width: 15%;
+}
 
   @media (min-width: 992px){
   .navbar-toggleable-md {

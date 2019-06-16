@@ -28,7 +28,7 @@ $(document).ready(function(){
         <label class="formulario__label">Nombre</label>
         <input type="text" name="nombre" value="<?php echo $cate->nombre ?>" class="formulario__input">
 
-        <button id="enviar" class="btn btn-primary"> Añadir </button>
+        <button id="enviar" class="btn btn-primary"> Editar </button>
     </form>
 </div>
 </div>

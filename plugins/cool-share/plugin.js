@@ -1,5 +1,6 @@
 
-$(function (){
+	
+$(function(){
 
 	//var url = 'http://tutorialzine.com/2014/08/cool-share-jquery-plugin/';
 	var url='http://localhost/proyecto_scholae/includes/indice.php';
@@ -25,7 +26,12 @@ $(function (){
 
 		// The URL is optional. If it is omitted, the plugin
 		// will use the URL of the current page.
-
+		$('body').on('click', '.noticia span', function(){
+		
+		//	texto=$(this).parent().text()
+		console.log(texto);
+		
+		  })
 		if(typeof url === 'object') {
 			options = url;
 			url = window.location.href;
@@ -63,8 +69,9 @@ $(function (){
 		// options.twitter.via - A screen name to associate with the Tweet. (By default: none)
 
 		if(options.twitter) {
-
+			
 			if (options.twitter.text) {
+				
 				shareURLs['twitter'] += '&text=' + encodeURIComponent(options.twitter.text);
 			}
 
@@ -163,7 +170,7 @@ $(function (){
 		// When a social icon is clicked, open a window with the share URL, centered on screen.
 
 		$('.socialPlugin a').click(function(e) {
-
+			
 			e.preventDefault();
 
 			var url = this.href,

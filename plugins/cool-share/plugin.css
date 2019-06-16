@@ -1,9 +1,6 @@
 /* Container Of The Plugin */
 
-.socials .opened{
-	width: 330px;
-    margin-left: 37% !important;
-}
+
 
 .socialPlugin .showSocialButtons {
 	font-size:15px;
@@ -78,13 +75,13 @@
 /* Share buttons */
 
 .socialPlugin .socials .fa {
-	height: 2.5em;
-	font-size: 2em;
-	overflow: hidden;
-	position: relative;
-	text-decoration: none;
-	width: 2.5em;
-	-webkit-backface-visibility: hidden;
+	height: 2em;
+    font-size: 1em;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    width: 3.5em;
+    -webkit-backface-visibility: hidden;
 }
 
 .socialPlugin .socials .fa:before, .socialPlugin .socials .fa:after {
@@ -104,7 +101,11 @@
 	transform: translate3D(0, -50%, 0);
 	z-index: 2;
 }
-
+.socials.opened{
+	position: relative;
+    top: 3.5em;
+    
+}
 .socialPlugin .socials .fa:after {
 	padding-bottom: 25%;
 	padding-top: 300%;
@@ -112,9 +113,9 @@
 }
 
 .socialPlugin .socials .fa:hover:after {
-	-webkit-transform: translate3D(0, -73%, 0);
-	-ms-transform: translate3D(0, -73%, 0);
-	transform: translate3D(0, -73%, 0);
+	-webkit-transform: translate3D(0, -83%, 0);
+	-ms-transform: translate3D(0, -83%, 0);
+	transform: translate3D(0, -83%, 0);
 }
 
 .socialPlugin .socials .fa:hover:before {
@@ -172,3 +173,4 @@
 	content: "\f173";
 	color: #2C4762;
 }
+

@@ -41,7 +41,7 @@ $saludo=$_GET['id'];
         <label class="formulario__label">Contraseña</label>
         <input type="password" name="contrasena" placeholder="rellenar para cambiar" class="formulario__input">
 
-        <button id="enviar" class="btn btn-primary"> Añadir </button>
+        <button id="enviar" class="btn btn-primary"> Editar </button>
     </form>
 </div>
 </div>
