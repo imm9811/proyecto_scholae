@@ -145,7 +145,7 @@ $(document).ready(function(){
         <script>
 var arrayFotos=[];
 function funciona(id){
-    var statusConfirm = confirm("¿Desea borrar la foto? Recuerde que después tiene que darle a Editar para que se efectuen los cambios");
+    var statusConfirm = confirm("¿Desea borrar la foto? Recuerde que después tiene que pulsar Editar para que se efectuen los cambios");
     if (statusConfirm == true)
     {
         arrayFotos.push(id);

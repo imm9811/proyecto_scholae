@@ -306,20 +306,22 @@ if (isset($apiMethod)) {
              
            } 
            
-          if(isset($_POST['arrayFotos'])){
+          if(!empty($_POST['arrayFotos'])){
             
             $cadena=$_POST['arrayFotos'];
             
             $array = explode(",", $cadena);
             
             foreach($array as $valor){
-              
+              echo $valor;
               $multimedia = Doctrine_Query::create()->from('Multimedia')
               ->where('id = ?',  $valor)
               ->execute()
               ->getFirst();
               $multimedia->eliminado=1;
+              
               $multimedia->save();
+              
             }
           }
 
@@ -342,7 +344,7 @@ if (isset($apiMethod)) {
           $noticia->titulo = $titulo;
           $noticia->descripcion = $descripcion;
           $noticia->categoria_id = $categoria_id;
-
+          
           $noticia->save();
           if(!empty($arrayArchivos)){
             foreach($arrayArchivos as $archivo){
@@ -352,14 +354,14 @@ if (isset($apiMethod)) {
               $multimedia->save();
             }
           }
-
-          if(isset($video)){
+          
+          if(!empty($video)){
             $multimedia= new Multimedia();
             $multimedia->url=$video;
             $multimedia->noticia_id=$noticia->id;
             $multimedia->save();
           } 
-          
+       
           $noticia = Doctrine_Query::create()
           ->from('Noticia')
           ->where('titulo = ?', $_POST['titulo'])
@@ -384,17 +386,7 @@ if (isset($apiMethod)) {
           ->execute()
           ->getFirst();
 
-        if($categorias=='Noticia'){
-          
-          $q = Doctrine_Query::create()
-          ->delete('Multimedia')
-          ->where("noticia_id = ?", $id)
-          ->execute();
-        }
-
-
-        header('Content-type: application/json');
-        header('location:  ../intranet/index.php?page=$categorias');
+        header("location:  ../intranet/index.php?page= $categorias");
         break;
       }
 

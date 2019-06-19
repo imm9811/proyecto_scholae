@@ -29,17 +29,33 @@
 
             foreach ($arrayCategorias as $categoria) {
               //echo "$administrador->nombre $administrador->id";
+             if($categoria->id==1 || $categoria->id==2){
               echo "
                           
-                          <tr>
-                            <td>$categoria->id</td>
-                            <td>$categoria->nombre</td>
-                            <td><a href='index.php?page=mod&id=$categoria->id&pertenece=Categorias'><span class='glyphicon-edit'>&#x270f;</span></a></td>";
+              <tr>
+                <td>$categoria->id</td>
+                <td>$categoria->nombre</td>
+                <td><a href='index.php?page=mod&id=$categoria->id&pertenece=Categorias'><span class='glyphicon-edit'>&#x270f;</span></a></td>";
               ?>
-              <td><button class='glyphicon-remove' onclick="return delete_post(<?php echo $categoria->id ?>, 'Categoria')"><span>X</span></button></td>
+              <td></td>
               <?php "
-                        </tr>
-                        ";
+            </tr>
+            ";
+             }else{
+
+                
+                  echo "
+                              
+                              <tr>
+                                <td>$categoria->id</td>
+                                <td>$categoria->nombre</td>
+                                <td><a href='index.php?page=mod&id=$categoria->id&pertenece=Categorias'><span class='glyphicon-edit'>&#x270f;</span></a></td>";
+                  ?>
+                  <td><button class='glyphicon-remove' onclick="return delete_post(<?php echo $categoria->id ?>, 'Categoria')"><span>X</span></button></td>
+                  <?php "
+                            </tr>
+                            ";
+              }
             }
           }else{
             echo " <tr>

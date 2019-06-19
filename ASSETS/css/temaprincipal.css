@@ -152,8 +152,7 @@ ul {
   list-style: none; }
 
 a {
-  text-decoration: none;
-  color: #007bff !important; }
+  text-decoration: none; }
 
 footer a {
   color: none !important; }
@@ -272,13 +271,13 @@ p {
 .navbar-brand {
   padding: 0px; }
 
-.navbar-brand > img {
+.navbar-brand > span {
   height: 40px;
   width: auto;
   z-index: 10;
   position: absolute;
   top: 13.45px;
-  left: 0;
+  left: 95px;
   padding: 0 25px;
   /*BAR HOW MUCH IN RIGHT*/
   background-color: white; }
@@ -308,6 +307,17 @@ footer {
 .cuerpo {
   position: relative;
   padding-left: 3%; }
+
+.navbar-brand > img {
+  height: 40px;
+  width: auto;
+  z-index: 10;
+  position: absolute;
+  top: 13.45px;
+  left: 0;
+  padding: 0 25px;
+  /*BAR HOW MUCH IN RIGHT*/
+  background-color: white; }
 
 .carousel-caption {
   margin-bottom: 5%; }
@@ -375,10 +385,18 @@ aside {
   source {
     height: 430px; }
 
+  a {
+    color: black; }
+
+  footer a {
+    color: #696969; }
+
   .texto_principal {
     position: relative;
     margin-left: 10px;
-    margin-right: 10px; } }
+    margin-right: 10px; }
+    .texto_principal a {
+      color: #007bff !important; } }
 .especial {
   display: none; }
 
@@ -420,6 +438,18 @@ aside {
       position: relative; } }
 /*PARA MOVIL*/
 @media only screen and (max-width: 800px) {
+  .navbar-brand > span {
+    height: 40px;
+    width: auto;
+    z-index: 10;
+    position: absolute;
+    left: -19px;
+    padding: 0 25px;
+    /*BAR HOW MUCH IN RIGHT*/ }
+
+  .navbar-brand > img {
+    display: none; }
+
   .socialShare {
     position: relative;
     right: 52%; }

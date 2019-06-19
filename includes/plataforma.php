@@ -27,6 +27,4 @@
              </div>      
                   ";
       }
-    } else {
-      echo " No hay Plataformas ";
-    }
+    } 

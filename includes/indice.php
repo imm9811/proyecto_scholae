@@ -30,8 +30,8 @@ include "plantilla.php";
 									<!--Caption-->
 									<div class="carousel-caption">
 										<div class="animated fadeInDown">
-											<h3 class="h3-responsive">Light mask</h3>
-											<p>First text</p>
+											<h3 class="h3-responsive">Ejemplo 1</h3>
+											<p>Ejemplo 1</p>
 										</div>
 									</div>
 									<!--Caption-->
@@ -52,8 +52,8 @@ include "plantilla.php";
 									<!--Caption-->
 									<div class="carousel-caption">
 										<div class="animated fadeInDown">
-											<h3 class="h3-responsive">Super light mask</h3>
-											<p>Secondary text</p>
+											<h3 class="h3-responsive">Ejemplo 2</h3>
+											<p>Ejemplo 2</p>
 										</div>
 									</div>
 									<!--Caption-->
@@ -74,8 +74,8 @@ include "plantilla.php";
 									<!--Caption-->
 									<div class="carousel-caption">
 										<div class="animated fadeInDown">
-											<h3 class="h3-responsive">Strong mask</h3>
-											<p>Third text</p>
+											<h3 class="h3-responsive">Ejemplo 3</h3>
+											<p>Ejemplo 3</p>
 										</div>
 									</div>
 									<!--Caption-->
@@ -121,7 +121,7 @@ include "plantilla.php";
 
 						echo "
                         	<div class='noticia'>
-                          <h2>$noticia->titulo </h2> <p class='socialShare'></p>
+                          <h2>$noticia->titulo </h2>
 						  <div>
 						  <p>$noticia->descripcion</p>
 						  
@@ -174,8 +174,11 @@ include "plantilla.php";
 												}
 											}
 											else{
-												echo "<div class='video'><iframe src='https://www.youtube.com/embed/$archivo->url' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>";
+												if($archivo->url !=""){
+													echo "<div class='video'><iframe src='https://www.youtube.com/embed/$archivo->url' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>";
 										
+												}
+												
 											}
 										}
 									}
@@ -260,6 +263,9 @@ include "plantilla.php";
 								echo "</div></div>";
 							} //fin del primer bucle
 						} //fin iflongArray
+						else{
+							echo "Sin noticias laterales";
+						}
 						?>
 
 			</div>

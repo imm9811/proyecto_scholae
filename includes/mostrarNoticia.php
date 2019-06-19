@@ -20,9 +20,7 @@
 								<div class='col-lg-11'>
 								  <h2>$noticia->titulo </h2>
 								</div>
-								<div class='col-lg-1 socialShare' >
-								 
-								</div>
+								
 								<div class='col-lg-12'>
 								<p class='cuerpo'>$noticia->descripcion</p>
 								

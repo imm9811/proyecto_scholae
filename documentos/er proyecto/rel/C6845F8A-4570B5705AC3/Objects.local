@@ -1,4 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<oracle.dbtools.crest.model.design.relational.RelationalDesign>
-   <object objectType="Table" objectID="EA0DB6FA-ED5C-7547-B72D-92C15DE38129" name="profesor" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="C6845F8A-55BE-1D0E-6F8C-4570B5705AC3" propertySourceId="" propertyTargetId=""/>
-</oracle.dbtools.crest.model.design.relational.RelationalDesign>

@@ -40,9 +40,17 @@
                           <td>$administrador->alias</td>
                           <td>$administrador->correo</td>
                           <td><a href='index.php?page=mod&id=$administrador->id&pertenece=Administradores'><span class='glyphicon-edit'>&#x270f;</span></a></td>";
-            ?>
+                          if($administrador->id==1)
+                          {
+                            ?>
+                            <td></td>
+                            <?php
+                          }
+                          else{
+           ?>
             <td><button class='glyphicon-remove' onclick="return delete_post(<?php echo $administrador->id ?>, 'Administrador')"><span>X</span></button></td>
-            <?php "
+            <?php }
+            "
                       </tr>
                       ";
           }

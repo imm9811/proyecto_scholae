@@ -23,8 +23,7 @@
     crossorigin="anonymous"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+
   <script language="javascript" type="text/javascript" src="../../plugins/BUSCADOR/jquery.dynacloud-5.js"></script>
   <script src="site_footer.js"></script>
   <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
@@ -45,13 +44,7 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="index.php?page=home">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Ajustes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Perfil</a>
+          <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
         </li>
         
       </ul>
@@ -96,6 +89,6 @@
       </nav>
 
 <?php
-  $arrayFormatosImagenes = ["jpeg", "jpg", "png", "gif", "tiff", "raw", "bmw", "svg"];
+  $arrayFormatosImagenes = ["jpeg", "jpg", "png", "gif", "tiff", "raw", "bmw", "svg","bmp"];
 	$arrayFormatosTextos= ["pdf","txt","doc","html","docx","zip","rar","xlsx"];
 ?>

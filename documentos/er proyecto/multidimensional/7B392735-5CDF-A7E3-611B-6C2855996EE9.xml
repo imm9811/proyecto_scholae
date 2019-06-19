@@ -1,7 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<MultidimensionalDesign class="oracle.dbtools.crest.model.design.multidimensional.MultidimensionalDesign" name="Multidimensional_2" id="7B392735-5CDF-A7E3-611B-6C2855996EE9" mainViewID="4FE354CF-6598-0A10-0850-DA003F9FAA55" boundModel="697F387D-17A0-2DD0-A80F-5E68AB156098">
-<createdBy>Ismael</createdBy>
-<createdTime>2019-03-28 13:25:03 UTC</createdTime>
-<ownerDesignName>er proyecto</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
-</MultidimensionalDesign>
